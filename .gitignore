@@ -45,3 +45,4 @@ bower.json
 
 config/database.yml
 config/secrets.yml
+/test/*
