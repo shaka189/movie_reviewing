@@ -1,1 +1,35 @@
 en:
+  flash:
+    create_new_film: "Complete create film"
+    fail_create_film: "Fail create film"
+    update_film: "Film updated!"
+    fail_update_film: "Fails updated!"
+    delete_film: "Film deleted!"
+    fail_delete_film: "Fails delete!"
+    load_film: "Not film with id "
+  layouts:
+    header:
+      home: "Home"
+      about_us: "About Us"
+      help: "Help"
+      search: "Search"
+      submit: "Search"
+      review_movie: "Review Film"
+    application:
+      english: "English"
+      vietnamese: "Vietnamese"
+  admin:
+    films:
+      index:
+        film_list: "Film List"
+        create_new_film: "Create New Film"
+        image: "Image"
+        name: "Name"
+        play_time: "Play Time"
+        trailer: "Link Trailer"
+        imdb_rate: "IDBM Rate"
+        describe: "Describe"
+      film:
+        edit_film: "Edit Film"
+        delete: "Delete"
+        you_sure: "You sure?"

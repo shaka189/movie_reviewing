@@ -1,6 +1,13 @@
 class Film < ApplicationRecord
-  has_many :post_reviews
-  has_many :ratings
-  has_many :categorys
-  has_many :watching_time
+  has_many :post_reviews, dependent: :destroy
+  has_many :ratings, dependent: :destroy
+  has_many :categorys, dependent: :destroy
+  has_many :watching_time, dependent: :destroy
+  has_many :users, throught: :ratings
+  validates :name, presence: true
+  validates :play_time, presence: true
+  validates :describe, presence: true,
+    length: {maximum: Settings.film.describe_maximum}
+    
+  scope :desc_create_time, -> {order(created_at: :desc)}
 end

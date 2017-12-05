@@ -10,64 +10,68 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171127132638) do
+ActiveRecord::Schema.define(version: 20171204115743) do
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "User_id"
+    t.integer "user_id"
     t.integer "quantity"
     t.float "price"
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["User_id"], name: "index_bookings_on_User_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "categories", force: :cascade do |t|
     t.string "content"
+    t.integer "film_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["film_id"], name: "index_categories_on_film_id"
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer "User_id"
-    t.integer "PostReview_id"
+    t.integer "user_id"
+    t.integer "post_review_id"
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["PostReview_id"], name: "index_comments_on_PostReview_id"
-    t.index ["User_id"], name: "index_comments_on_User_id"
+    t.index ["post_review_id"], name: "index_comments_on_post_review_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "films", force: :cascade do |t|
     t.string "name"
-    t.integer "run_time"
+    t.integer "play_time"
     t.string "link_trailer"
     t.string "image"
-    t.float "avg_rate", default: 0.0
+    t.float "imdb_rate", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "describe"
   end
 
   create_table "post_reviews", force: :cascade do |t|
-    t.integer "User_id"
-    t.integer "Film_id"
+    t.integer "user_id"
+    t.integer "film_id"
     t.string "title"
     t.text "content"
     t.boolean "approve"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Film_id"], name: "index_post_reviews_on_Film_id"
-    t.index ["User_id"], name: "index_post_reviews_on_User_id"
+    t.index ["film_id"], name: "index_post_reviews_on_film_id"
+    t.index ["user_id"], name: "index_post_reviews_on_user_id"
   end
 
   create_table "ratings", force: :cascade do |t|
-    t.integer "Film_id"
-    t.integer "User_id"
+    t.integer "film_id"
+    t.integer "user_id"
     t.integer "mark", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Film_id"], name: "index_ratings_on_Film_id"
-    t.index ["User_id"], name: "index_ratings_on_User_id"
+    t.index ["film_id", "user_id"], name: "index_ratings_on_film_id_and_user_id", unique: true
+    t.index ["film_id"], name: "index_ratings_on_film_id"
+    t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -81,16 +85,16 @@ ActiveRecord::Schema.define(version: 20171127132638) do
   end
 
   create_table "watching_times", force: :cascade do |t|
-    t.integer "Film_id"
-    t.integer "Booking_id"
+    t.integer "film_id"
+    t.integer "booking_id"
     t.datetime "time_begin"
     t.date "day_watching"
     t.integer "total_ticket"
     t.integer "remaining_ticket"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Booking_id"], name: "index_watching_times_on_Booking_id"
-    t.index ["Film_id"], name: "index_watching_times_on_Film_id"
+    t.index ["booking_id"], name: "index_watching_times_on_booking_id"
+    t.index ["film_id"], name: "index_watching_times_on_film_id"
   end
 
 end

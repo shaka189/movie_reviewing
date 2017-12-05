@@ -1,0 +1,4 @@
+paginate_number:
+  per_page: 10
+film:
+  describe_maximum: 450
