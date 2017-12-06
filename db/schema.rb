@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171204115743) do
+ActiveRecord::Schema.define(version: 20171208102351) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
@@ -82,6 +82,18 @@ ActiveRecord::Schema.define(version: 20171204115743) do
     t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reset_digest"
+    t.datetime "reset_sent_at"
+    t.date "birthday"
+    t.string "address"
+    t.string "remember_digest"
+    t.string "password_digest"
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.datetime "activated_at"
+    t.string "oauth_token"
+    t.datetime "oauth_exprires_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   create_table "watching_times", force: :cascade do |t|

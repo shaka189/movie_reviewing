@@ -22,7 +22,7 @@ class Admin::FilmsController < ApplicationController
 
   def update
     if @film.update_attributes film_params
-      flash[:success] = t("flash.update_film") 
+      flash[:success] = t("flash.update_film")
     else
       flash[:danger] = t("flash.fail_update_film")
     end
@@ -48,6 +48,6 @@ class Admin::FilmsController < ApplicationController
   end
 
   def film_params
-    params.require(:film).permit :name, :play_time, :link_trailer, :pictuer, :avg_rate, :describe
+    params.require(:film).permit :name, :play_time, :link_trailer, :pictuer, :imdb_rate, :describe
   end
 end
