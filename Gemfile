@@ -11,10 +11,13 @@ gem "puma", "~> 3.7"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
 gem "coffee-rails", "~> 4.2"
-gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "bootstrap-sass"
+gem "mysql2", ">= 0.3.18", "< 0.5"
+gem "will_paginate"
+gem "config"
+gem "rails-i18n"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

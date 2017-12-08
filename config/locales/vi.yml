@@ -1,0 +1,35 @@
+vi:
+  flash:
+    create_new_film: "Tạo phim mới thành công"
+    fail_create_film: "Tạo phim thất bại"
+    update_film: "Chỉnh sửa phim thành công"
+    fail_update_film: "Chỉnh sửa phim không thành công"
+    delete_film: "Phim đã được xóa"
+    fail_delete_film: "Xóa phim không thành công"
+    load_film: "Không tìm thấy phim với id là "
+  layouts:
+    header:
+      home: "Trang chủ"
+      about_us: "Về chúng tôi"
+      help: "Hỗ trợ"
+      search: "Nội dung tìm kiếm"
+      submit: "Tìm"
+      review_movie: "Đánh Giá Phim"
+    application:
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
+  admin:
+    films:
+      index:
+        film_list: "Danh sách phim"
+        create_new_film: "Tạo Phim Mới"
+        image: "Ảnh"
+        name: "Tên Phim"
+        play_time: "Thời lượng"
+        trailer: "Link Trailer"
+        imdb_rate: "Điểm IMDB"
+        describe: "Mô tả"
+      film:
+        edit_film: "Chỉnh sửa phim"
+        delete: "Xóa bỏ"
+        you_sure: "Bạn chắc chắn muốn xóa không?"
