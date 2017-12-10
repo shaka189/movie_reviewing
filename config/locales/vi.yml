@@ -28,11 +28,24 @@ vi:
     account_activation: "Kích hoạt tài khoản"
     password_reset_1: "Kích hoạt lại mật khẩu"
     cant_load: "Không thể tìm thấy người dùng"
+    update_success: "Cập nhật thành công"
+    update_fail: "Cập nhật thất bại"
+    destroy_success: "Xóa người dùng thành công "
+    destroy_fail: "Xóa người dùng thất bại"
+    load_user_fail: "Không thể tìm thấy người dùng"
+    create_post_success: "Tạo bài đánh giá thành công"
+    create_post_fail: "Tạo bài đánh giá thất bại"
+    post_update_success: "Cập nhật thành công"
+
   form:
     name: "Tên người dùng"
     dob: "Ngày tháng năm sinh"
     password: "Mật khẩu "
     password_confirm: "Mật khẩu xác nhận lại"
+    create_user: "Chào mừng bạn đến với trang web của tôi"
+    email: "Email"
+    avatar: "Ảnh đại diện"
+
   layouts:
     header:
       home: "Trang chủ"
@@ -46,6 +59,7 @@ vi:
     application:
       english: "Tiếng Anh"
       vietnamese: "Tiếng Việt"
+
   admin:
     films:
       index:
@@ -71,6 +85,7 @@ vi:
         play_time: "Thời lượng"
         imdb: "Điểm imdb"
         describe: "Mô tả"
+
   sessions:
     new:
       input_email: "Nhập email vào đây"
@@ -80,20 +95,7 @@ vi:
       sign_up: "Đăng kí tài khoản"
       new_user: "Người dùng mới"
       forgot_password: "(quên mật khẩu)"
-  users:
-    form:
-      input_name: "Nhập tên bạn vào đây"
-      input_dob: "Nhập ngày tháng năm sinh vào đây"
-      input_email: "Nhập email vào đây"
-      input_password: "Nhập mật khẩu vào đây"
-      input_password_confirm: "Nhập lại mật khẩu vào đây"
-      create: "Tạo tài khoản"
-    new:
-      signup: "Đăng kí tài khoản"
-    edit:
-     update_profile: "Cập nhật tài khoản"
-    index:
-      all_user: "Tất cả người dùng"
+
   password_resets:
     new:
       submit_button: "Gửi"
@@ -104,4 +106,56 @@ vi:
     error_messages:
       error: "Lỗi"
 
+  users:
+    edit:
+      update_profile: "Cập nhật tài khoản"
+      edit_user: "Cập nhật thông tin"
 
+      close: "Đóng"
+      update: "Cập nhật thông tin cá nhân"
+      name: "Nhập tên"
+      email: "Nhập email"
+      dob: "Ngày sinh"
+
+    show:
+      edit: "Sửa"
+      hello: "Xin chào"
+    index:
+      all_user: "Tất cả người dùng"
+    new:
+      signup: "Đăng kí tài khoản"
+    form:
+      input_name: "Nhập tên bạn vào đây"
+      input_dob: "Nhập ngày tháng năm sinh vào đây"
+      input_email: "Nhập email vào đây"
+      input_password: "Nhập mật khẩu vào đây"
+      input_password_confirm: "Nhập lại mật khẩu vào đây"
+      create: "Tạo tài khoản"
+      save_change: "Lưu thay đổi"
+
+  post_reviews:
+    new:
+      title: "Tiêu đề"
+      content: "Nội dung"
+      fill_title: "...Nhập tiêu đề..."
+      fill_content: "...Nhập nội dung..."
+      submit_create: "Tạo bài viết"
+    index:
+      my_post: "Danh sách bài viết của tôi"
+      approve: "Phê duyệt"
+    edit:
+      submit_edit: "Xác nhận"
+      edit_post: "Sửa bài viết"
+  shared:
+    post:
+      edit_post: "Sửa"
+      delete: "Xóa"
+      approve_true: "Đã duyệt"
+      approve_fail: "Chưa duyệt"
+      you_sure: "Chắc chưa?"
+    index:
+      title: "Tiêu đề"
+      content: "Nội dung"
+      approve: "Phê duyệt"
+      my_post_list: "Bài viết của tôi"
+      create_new_post: "Tạo bài viết mới"

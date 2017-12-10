@@ -53,24 +53,23 @@ ActiveRecord::Schema.define(version: 20171208102351) do
 
   create_table "post_reviews", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "film_id"
     t.string "title"
     t.text "content"
-    t.boolean "approve"
+    t.boolean "approve", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["film_id"], name: "index_post_reviews_on_film_id"
+    t.index ["user_id", "created_at"], name: "index_post_reviews_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_post_reviews_on_user_id"
   end
 
   create_table "ratings", force: :cascade do |t|
-    t.integer "film_id"
+    t.integer "post_review_id"
     t.integer "user_id"
     t.integer "mark", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["film_id", "user_id"], name: "index_ratings_on_film_id_and_user_id", unique: true
-    t.index ["film_id"], name: "index_ratings_on_film_id"
+    t.index ["post_review_id", "user_id"], name: "index_ratings_on_post_review_id_and_user_id", unique: true
+    t.index ["post_review_id"], name: "index_ratings_on_post_review_id"
     t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 

@@ -1,4 +1,4 @@
 class Rating < ApplicationRecord
   belongs_to :user
-  belongs_to :film
+  belongs_to :post_review
 end

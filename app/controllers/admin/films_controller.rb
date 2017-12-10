@@ -2,7 +2,7 @@ class Admin::FilmsController < ApplicationController
   before_action :load_films, except: [:new, :create, :index]
 
   def index
-    @film = Film.desc_create_time.paginate page: params[:page],
+    @films = Film.desc_create_time.paginate page: params[:page],
       per_page: Settings.paginate_number.per_page
   end
 
@@ -37,6 +37,7 @@ class Admin::FilmsController < ApplicationController
     end
     redirect_to admin_films_path
   end
+
 
   private
 

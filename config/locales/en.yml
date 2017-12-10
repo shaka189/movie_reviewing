@@ -18,6 +18,7 @@ en:
     login: "Please log in."
     password_reset: "Email sent with password reset instructions"
     email_notfound: "Email address not found"
+    not_empty: "Not Empty"
     reset: "Password has been reset."
     password_expired: "Password reset has expired."
     active_fail: "Account not activated."
@@ -27,12 +28,24 @@ en:
     account_activation: "Account activation"
     password_reset_1: "Password reset"
     cant_load: "Can't load user"
+    update_success: "Update Complete"
+    update_fail: "Failed update"
+    destroy_success: "Succeeded delete"
+    destroy_fail: "Failed delete"
+    load_user_fail: "Can't find user with id "
+    create_post_success: "Create Post success"
+    create_post_fail: "Create Post Fail"
+    post_update_success: "Update Post success"
 
   form:
     name: "Name"
     dob: "Date of birth"
     password: "Password"
     password_confirm: "Password Confirmation"
+    create_user: "Welcome to my page"
+    email: "Email"
+    avatar: "Avatar"
+
   layouts:
     header:
       home: "Home"
@@ -46,6 +59,7 @@ en:
     application:
       english: "English"
       vietnamese: "Vietnamese"
+
   admin:
     films:
       index:
@@ -71,6 +85,7 @@ en:
         play_time: "Play time"
         imdb: "Imdb rate"
         describe: "Describe"
+
   sessions:
     new:
       input_email: "Please input your email here"
@@ -80,20 +95,7 @@ en:
       sign_up: "Sign up now!"
       new_user: "New user?"
       forgot_password: "(forgot password)"
-  users:
-    form:
-      input_name: "Please input your name here"
-      input_dob: "Input your date of birth here"
-      input_email: "Please input your email here"
-      input_password: "Input your password"
-      input_password_confirm: "input your password confirmation"
-      create: "Create my account"
-    new:
-      signup: "Sign Up"
-    edit:
-     update_profile: "Update Your Profile"
-    index:
-      all_user: "All User"
+
   password_resets:
     new:
       submit_button: "Submit"
@@ -104,5 +106,56 @@ en:
     error_messages:
       error: "Error"
 
+  users:
+    edit:
+      update_profile: "Update Your Profile"
+      edit_user: "Edit User"
 
+      close: "Close"
+      update: "Update Your Profile"
+      name: "Name"
+      email: "Email"
+      dob: "Date of birth"
 
+    show:
+      edit: "Edit Profile"
+      hello: "Hello"
+    index:
+      all_user: "All User"
+    new:
+      signup: "Sign Up"
+    form:
+      input_name: "Please input your name here"
+      input_dob: "Input your date of birth here"
+      input_email: "Please input your email here"
+      input_password: "Input your password"
+      input_password_confirm: "input your password confirmation"
+      create: "Create my account"
+      save_change: "Save changes"
+
+  post_reviews:
+    new:
+      title: "Title"
+      content: "Content"
+      fill_title: "...Fill title..."
+      fill_content: "...Fill content..."
+      submit_create: "Create Post"
+    index:
+      my_post: "List Post "
+      approve: "Approve"
+    edit:
+      submit_edit: "Submit"
+      edit_post: "Edit Post"
+  shared:
+    post:
+      edit_post: "Edit"
+      delete: "Delete"
+      approve_true: "True"
+      approve_fail: "False"
+      you_sure: "You sure?"
+    index:
+      title: "Title"
+      content: "Content"
+      approve: "Approve"
+      my_post_list: "My Post"
+      create_new_post: "Create New Post"

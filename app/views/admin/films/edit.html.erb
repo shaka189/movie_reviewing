@@ -13,7 +13,7 @@
           <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
         </span> </br>
         <%= f.label :imdb_rate, t("admin.films.index.imdb_rate") %>
-        <%= f.number_field :imdb_rate, step: "any", placeholder: t("admin.films.edit.imdb_rate") %> </br>
+        <%= f.number_field :imdb_rate, step: "any", placeholder: t("admin.films.edit.imdb_rate") %></br>
         <%= f.label :describe , t("admin.films.edit.describe")%>
         <%= f.text_area :describe, placeholder: t("admin.films.index.describe") %> </br>
         <%= f.submit t("admin.films.film.edit_film"), class: "btn btn-primary" %>

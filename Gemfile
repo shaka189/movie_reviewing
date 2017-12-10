@@ -18,6 +18,9 @@ gem "will_paginate"
 gem "config"
 gem "rails-i18n"
 gem "bcrypt"
+gem "carrierwave", "1.1.0"
+gem "mini_magick", "4.7.0"
+
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "capybara", "~> 2.13"
