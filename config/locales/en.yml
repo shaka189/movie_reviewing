@@ -1,5 +1,6 @@
 en:
   flash:
+    find_user: "Can't find user with id: "
     create_new_film: "Complete create film"
     fail_create_film: "Fail create film"
     update_film: "Film updated!"
@@ -7,6 +8,31 @@ en:
     delete_film: "Film deleted!"
     fail_delete_film: "Fails delete!"
     load_film: "Not film with id "
+    activate: "Account activated!"
+    invalid_activate: "Invalid activation link"
+    check_email: "Please check your email to activate your account."
+    success: "Account activated!"
+    invalid_link: "Invalid activation link"
+    update_profile: "Profile updated"
+    delete_user: "User deleted"
+    login: "Please log in."
+    password_reset: "Email sent with password reset instructions"
+    email_notfound: "Email address not found"
+    reset: "Password has been reset."
+    password_expired: "Password reset has expired."
+    active_fail: "Account not activated."
+    check_link: "Check your email for the activation link."
+    invalid_email_password: "Invalid email/password combination"
+    cant_empty: "can't be empty"
+    account_activation: "Account activation"
+    password_reset_1: "Password reset"
+    cant_load: "Can't load user"
+
+  form:
+    name: "Name"
+    dob: "Date of birth"
+    password: "Password"
+    password_confirm: "Password Confirmation"
   layouts:
     header:
       home: "Home"
@@ -15,6 +41,8 @@ en:
       search: "Search"
       submit: "Search"
       review_movie: "Review Film"
+      login: "Log in"
+      logout: "Log out"
     application:
       english: "English"
       vietnamese: "Vietnamese"
@@ -33,3 +61,48 @@ en:
         edit_film: "Edit Film"
         delete: "Delete"
         you_sure: "You sure?"
+      edit:
+        name: "Name"
+        play_time: "Play time"
+        imdb: "Imdb rate"
+        describe: "Describe"
+      new:
+        name: "Name"
+        play_time: "Play time"
+        imdb: "Imdb rate"
+        describe: "Describe"
+  sessions:
+    new:
+      input_email: "Please input your email here"
+      input_password: "Input your password"
+      remember_me: "Remember me on this computer"
+      login: "Log in"
+      sign_up: "Sign up now!"
+      new_user: "New user?"
+      forgot_password: "(forgot password)"
+  users:
+    form:
+      input_name: "Please input your name here"
+      input_dob: "Input your date of birth here"
+      input_email: "Please input your email here"
+      input_password: "Input your password"
+      input_password_confirm: "input your password confirmation"
+      create: "Create my account"
+    new:
+      signup: "Sign Up"
+    edit:
+     update_profile: "Update Your Profile"
+    index:
+      all_user: "All User"
+  password_resets:
+    new:
+      submit_button: "Submit"
+      forgot_password: "Forgot password"
+    edit:
+      reset_password: "Reset password"
+  share:
+    error_messages:
+      error: "Error"
+
+
+
