@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many :ratings, dependent: :destroy
   has_many :films, through: :ratings
+  mount_uploader :avatar, PictureUploader
   validates :name,  presence: true, length: {maximum: Settings.user.name_maximum}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: {maximum: Settings.user.email_maximum},

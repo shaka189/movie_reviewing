@@ -5,7 +5,13 @@ class UsersController < ApplicationController
   before_action :load_user, except: [:index, :new, :create]
 
   def index
-    @users = User.paginate page: params[:page]
+    @users = User.paginate page: params[:page],
+      per_page: Settings.paginate_number.per_page
+  end
+
+  def show
+    @posts = @user.post_reviews.paginate page: params[:page],
+      per_page: Settings.paginate_number.per_page
   end
 
   def new
@@ -15,8 +21,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      UserMailer.account_activation @user .deliver_now
-      flash[:info] = t("flash.check_email")
+      UserMailer.account_activation @user .deliver
+      flash[:info] = t "flash.check_email"
       redirect_to root_url
     else
       render "new"
@@ -25,7 +31,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes user_params
-      flash[:success] = t("flash.update_profile")
+      flash[:success] = t "flash.update_profile"
       redirect_to @user
     else
       render "edit"
@@ -34,9 +40,9 @@ class UsersController < ApplicationController
 
    def destroy
     if @user.destroy
-      flash[:success] = t("flash.delete_user")
+      flash[:success] = t "flash.delete_user"
     else
-      flash[:danger] = t("flash.cant_load")
+      flash[:danger] = t "flash.cant_load"
     end
     redirect_to users_url
   end
@@ -46,17 +52,17 @@ class UsersController < ApplicationController
   def load_user
     @user = User.find_by id: params[:id]
     return if @user
-    flash[:danger] = t("flash.find_user")  + params[:id]
+    flash[:danger] = t("flash.find_user") + "#{params[:id]}"
     redirect_to root_url
   end
 
   def user_params
-    params.require(:user).permit :name, :email, :password, :password_confirmation,:dob
+    params.require(:user) .permit :name, :email, :password, :password_confirmation,:dob, :avatar
   end
 
   def logged_in_user
     unless logged_in?
-      flash[:danger] = t("flash.login")
+      flash[:danger] = t "flash.login"
       redirect_to login_url
     end
   end
@@ -66,7 +72,10 @@ class UsersController < ApplicationController
     redirect_to root_url unless current_user? @user
   end
 
-  def admin_user
+  def verify_admin
     redirect_to root_url unless current_user.admin?
+    flash[:danger] = t "flash.load_user_fail" + params[:id]
+    redirect_to root_path
   end
+
 end
