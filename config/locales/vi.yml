@@ -32,6 +32,8 @@ vi:
     update_fail: "Cập nhật thất bại"
     destroy_success: "Xóa người dùng thành công "
     destroy_fail: "Xóa người dùng thất bại"
+    destroy_post_success: "Xóa bài viết thành công"
+    destroy_post_fail: "Xóa bài viết thất bại"
     load_user_fail: "Không thể tìm thấy người dùng"
     create_post_success: "Tạo bài đánh giá thành công"
     create_post_fail: "Tạo bài đánh giá thất bại"
@@ -128,10 +130,10 @@ vi:
       name: "Nhập tên"
       email: "Nhập email"
       dob: "Ngày sinh"
-
     show:
       edit: "Sửa"
       hello: "Xin chào"
+      create_new_post: "Tạo bài viết mới"
     index:
       all_user: "Tất cả người dùng"
     new:
@@ -147,17 +149,20 @@ vi:
 
   post_reviews:
     new:
-      title: "Tiêu đề"
-      content: "Nội dung"
-      fill_title: "...Nhập tiêu đề..."
       fill_content: "...Nhập nội dung..."
-      submit_create: "Tạo bài viết"
     index:
       my_post: "Danh sách bài viết của tôi"
       approve: "Phê duyệt"
     edit:
-      submit_edit: "Xác nhận"
       edit_post: "Sửa bài viết"
+    form:
+      fill_title: "...Nhập tiêu đề..."
+      submit_create: "Tạo bài viết"
+      submit_edit: "Xác nhận"
+      title: "Tiêu đề(Tối đa 50 kí tự)"
+      content: "Nội dung"
+      back_to_profile: "Trở về trang cá nhân của tôi"
+
   shared:
     post:
       edit_post: "Sửa"
@@ -170,4 +175,4 @@ vi:
       content: "Nội dung"
       approve: "Phê duyệt"
       my_post_list: "Bài viết của tôi"
-      create_new_post: "Tạo bài viết mới"
+

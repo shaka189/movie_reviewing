@@ -7,7 +7,7 @@ class ScrapingImdb
   def initialize
     @doc = Nokogiri::HTML(open(URL))
   end
-  
+
   def title
     doc.css(".titleColumn")
   end

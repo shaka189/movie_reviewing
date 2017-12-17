@@ -32,6 +32,8 @@ en:
     update_fail: "Failed update"
     destroy_success: "Succeeded delete"
     destroy_fail: "Failed delete"
+    destroy_post_success: "Succeeded delete post"
+    destroy_post_fail: "Failed delete post"
     load_user_fail: "Can't find user with id "
     create_post_success: "Create Post success"
     create_post_fail: "Create Post Fail"
@@ -128,10 +130,10 @@ en:
       name: "Name"
       email: "Email"
       dob: "Date of birth"
-
     show:
       edit: "Edit Profile"
       hello: "Hello"
+      create_new_post: "Create New Post"
     index:
       all_user: "All User"
     new:
@@ -147,17 +149,20 @@ en:
 
   post_reviews:
     new:
-      title: "Title"
-      content: "Content"
-      fill_title: "...Fill title..."
       fill_content: "...Fill content..."
-      submit_create: "Create Post"
     index:
       my_post: "List Post "
       approve: "Approve"
     edit:
-      submit_edit: "Submit"
       edit_post: "Edit Post"
+    form:
+      fill_title: "...Fill title..."
+      submit_edit: "Submit"
+      submit_create: "Create Post"
+      title: "Title(Max 50 character)"
+      content: "Content"
+      back_to_profile: "Back to my profile"
+
   shared:
     post:
       edit_post: "Edit"
@@ -170,4 +175,4 @@ en:
       content: "Content"
       approve: "Approve"
       my_post_list: "My Post"
-      create_new_post: "Create New Post"
+
