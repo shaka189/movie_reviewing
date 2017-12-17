@@ -69,7 +69,9 @@ vi:
       language: "Ngôn ngữ"
       english: "Tiếng Anh"
       vietnamese: "Tiếng Việt"
-
+  pages:
+    home:
+      top_movie: "Top 10 phim ăn khách trong tuần"
   admin:
     films:
       index:

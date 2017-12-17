@@ -46,18 +46,18 @@
   </div>
   <div class="col-sm-4">
     <div class="well">
-      <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
+      <table>
+        <tr>
+          <td>
+            <h3><%= t".top_movie" %></h3>
+          </td>
+        </tr>
+        <% @movie_title.each do |movie| %>
+          <tr>
+            <td><%= movie.text %></td>
+          </tr>
+        <% end %>
+      </table>
     </div>
   </div>
 </div>

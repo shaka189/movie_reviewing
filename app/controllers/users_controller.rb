@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:show, :create, :new]
   before_action :correct_user, only: [:edit, :update]
-  before_action :admin_user, only: :destroy
+  before_action :verify_admin, only: :destroy
   before_action :load_user, except: [:index, :new, :create]
 
   def index
