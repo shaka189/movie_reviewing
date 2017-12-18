@@ -69,7 +69,9 @@ en:
       language: "Language"
       english: "English"
       vietnamese: "Vietnamese"
-
+  pages:
+    home:
+      top_movie: "Top 10 movie in week"
   admin:
     films:
       index:
