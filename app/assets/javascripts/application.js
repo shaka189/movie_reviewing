@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require rails-ujs
+//= require ckeditor/init
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 6000
+    })
+});

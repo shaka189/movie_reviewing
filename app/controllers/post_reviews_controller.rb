@@ -34,9 +34,9 @@ class PostReviewsController < ApplicationController
 
   def destroy
     if @post.destroy
-      flash[:success] = t "flash.destroy_success"
+      flash[:success] = t "flash.destroy_post_success"
     else
-      flash[:danger] = t "flash.destroy_fail"
+      flash[:danger] = t "flash.destroy_post_fail"
     end
     redirect_to user_path current_user
   end

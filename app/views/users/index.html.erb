@@ -1,6 +1,10 @@
-<% provide :title, t "users.index.all_user" %>
-<h1><%= t "users.index.all_user" %></h1>
-<ul class="users" >
-  <%= render @users %>
-</ul>
-<%= will_paginate %>
+<div class="container container-fluid">
+  <div class="row">
+    <% provide :title, t "users.index.all_user" %>
+    <h1><%= t "users.index.all_user" %></h1>
+    <ul class="users" >
+      <%= render @users %>
+    </ul>
+    <%= will_paginate %>
+  </div>
+</div>

@@ -1,6 +1,5 @@
 <tr>
   <td><%= link_to post.title, post_review_path(post) %></td>
-  <td><%= post.content %></td>
   <td>
     <% if post.approve %><%= t ".approve_true" %>
       <% else %> <%= t ".approve_fail" %>
