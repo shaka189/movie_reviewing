@@ -85,6 +85,7 @@ en:
         trailer: "Link Trailer"
         imdb_rate: "IDBM Rate"
         describe: "Describe"
+        submit: "Submit"
       film:
         edit_film: "Edit Film"
         delete: "Delete"
@@ -99,7 +100,11 @@ en:
         play_time: "Play time"
         imdb: "Imdb rate"
         describe: "Describe"
-
+      watching_time_fields:
+        watching_day: "Watching Day"
+        total_ticket: "Total Ticket"
+      film_form:
+        categories: "Categories"
   sessions:
     new:
       input_email: "Please input your email here"

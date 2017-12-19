@@ -16,8 +16,23 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+
 $(document).ready(function() {
     $('.carousel').carousel({
       interval: 6000
     })
+});
+
+$(function() {
+  remove_fields = function(link){
+    $(link).prev('input[type=hidden]').val('1');
+    $(link).closest('fieldset').hide();
+  };
+
+  $('.add_fields').on('click', function(event){
+    var time = new Date().getTime();
+    var regexp = new RegExp($(this).data('id'), 'g');
+    $(this).before($(this).data('fields').replace(regexp, time));
+    event.preventDefault();
+  })
 });

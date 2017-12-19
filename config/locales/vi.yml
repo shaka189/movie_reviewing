@@ -85,6 +85,7 @@ vi:
         trailer: "Link Trailer"
         imdb_rate: "Điểm IMDB"
         describe: "Mô tả"
+        submit: "Gửi"
       film:
         edit_film: "Chỉnh sửa phim"
         delete: "Xóa bỏ"
@@ -99,7 +100,11 @@ vi:
         play_time: "Thời lượng"
         imdb: "Điểm imdb"
         describe: "Mô tả"
-
+      watching_time_fields:
+        watching_day: "Ngày chiếu"
+        total_ticket: "Tổng số vé"
+      film_form:
+        categories: "Thể loại"
   sessions:
     new:
       input_email: "Nhập email vào đây"

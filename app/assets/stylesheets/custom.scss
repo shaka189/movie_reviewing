@@ -93,6 +93,10 @@ p {
     top: 50px;
   }
 }
+#size_for_avatar {
+  width: 40px;
+  height: 40px;
+}
 /* forms */
 input, textarea, select, .uneditable-input {
   border: 1px solid $gray;
