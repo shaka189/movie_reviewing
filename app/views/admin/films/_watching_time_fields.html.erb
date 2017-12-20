@@ -1,0 +1,13 @@
+<fieldset>
+  <div class="row">
+    <div class="col-md-8">
+      <%= f.label :day_watching, t(".watching_day") %>
+      <%= f.date_field :day_watching, class: "form-control" %><br/>
+      <%= f.label :total_ticket, t(".total_ticket") %>
+      <%= f.number_field :total_ticket, class: "form-control" %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to_remove_fields f %>
+    </div>
+  </div>
+</fieldset>

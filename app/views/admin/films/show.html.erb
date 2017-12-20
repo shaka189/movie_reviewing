@@ -9,9 +9,13 @@
       <%= t "admin.films.index.imdb_rate" %>: <%= @film.imdb_rate %>
     </li>
     <li>
-      <iframe width="560" height="315" src= "https://www.youtube.com/embed/<%= @film.link_trailer %>">
-        frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+      <%= raw @film.link_trailer %>
     </li>
     <li> <%= @film.describe %> </li>
   </ul>
+  <ol>
+    <%= @film.categories.each do |category| %>
+      <li><%= category.content %></li>
+    <% end %>
+  </ol>
 </div>
