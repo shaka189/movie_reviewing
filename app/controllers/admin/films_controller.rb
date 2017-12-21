@@ -50,7 +50,7 @@ class Admin::FilmsController < Admin::BaseController
     flash[:danger] = t("flash.load_film") + "#{params[:id]}"
     redirect_to root_path
   end
-
+  
   def film_params
     params.require(:film).permit :name, :play_time, :link_trailer, :image, :imdb_rate,
       :describe, :status, categories_attributes: [:id, :content, :_destroy], 
