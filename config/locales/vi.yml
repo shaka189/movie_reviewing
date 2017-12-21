@@ -42,6 +42,11 @@ vi:
     active_account: "Tài khoản chưa được kích hoạt"
     check_email: " Kiểm tra email để kích hoạt tài khoản"
     invalid: "Email hoặc mật khẩu của bạn không đúng"
+    wrong_quantity: "Số lượng đặt không được lớn hơn số vé còn lại"
+    booking_success: "Đặt vé thành công!"
+    booking_fail: "Đặt vé thất bại!"
+    destroy_booking_success: "Hủy đặt vé thành công"
+    destroy_booking_fail: "Hủy đặt vé thất bại"
 
   form:
     name: "Tên người dùng"
@@ -95,14 +100,23 @@ vi:
         play_time: "Thời lượng"
         imdb: "Điểm imdb"
         describe: "Mô tả"
+        image: "Ảnh bìa"
+        status: "Trạng thái"
+        old: "Phim Cũ"
+        now_playing: "Đang chiếu"
+        comming_soon: "Sắp chiếu"
       new:
         name: "Tên phim"
         play_time: "Thời lượng"
         imdb: "Điểm imdb"
         describe: "Mô tả"
-      watching_time_fields:
+      watching_day_fields:
         watching_day: "Ngày chiếu"
+      watching_time_fields:
         total_ticket: "Tổng số vé"
+        price: "Giá vé"
+        watching_time: "Thời gian"
+        time: "Thời gian bắt đầu"
       film_form:
         categories: "Thể loại"
   sessions:
@@ -139,6 +153,11 @@ vi:
       edit: "Sửa"
       hello: "Xin chào"
       create_new_post: "Tạo bài viết mới"
+      my_booking: "Đặt vé"
+      film_name: "Tên phim"
+      day_watching: "Ngày chiếu"
+      time: "Giờ chiếu"
+      quantity: "Số vé"
     index:
       all_user: "Tất cả người dùng"
     new:
@@ -180,4 +199,16 @@ vi:
       content: "Nội dung"
       approve: "Phê duyệt"
       my_post_list: "Bài viết của tôi"
-
+    booking:
+      cancellation: "Hủy bỏ"
+      you_sure: "Bạn có chắc muốn hủy vé không?"
+  bookings:
+    index:
+      booking_online: "Đặt vé trực tuyến"
+      booking_ticket: "Đặt Vé"
+      day_watching: "Ngày chiếu"
+      time: "Thời gian bắt đầu"
+      quantity: "Số lượng"
+      price: "Giá vé"
+      total_price: "Tổng tiền"
+      remaining_ticket: "Số vé còn lại"

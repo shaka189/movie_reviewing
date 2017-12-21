@@ -9,6 +9,7 @@ class Admin::FilmsController < Admin::BaseController
   def new
     @film = Film.new
     @film.categories.build
+    @film.watching_days.build
     @film.watching_times.build
   end
 
@@ -51,8 +52,9 @@ class Admin::FilmsController < Admin::BaseController
   end
 
   def film_params
-    params.require(:film).permit :name, :play_time, :link_trailer, :picture,
-      :imdb_rate, :describe, categories_attributes: [:id, :content, :_destroy], 
-      watching_times_attributes: [:id, :day_watching, :total_ticket, :_destroy]
+    params.require(:film).permit :name, :play_time, :link_trailer, :image, :imdb_rate,
+      :describe, :status, categories_attributes: [:id, :content, :_destroy], 
+      watching_days_attributes: [:id, :day_watching, :_destroy,
+      watching_times_attributes: [:id, :time, :total_ticket, :price, :_destroy]]
   end
 end

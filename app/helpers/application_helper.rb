@@ -1,7 +1,7 @@
 module ApplicationHelper
   def avatar_for user, options = {size: 80}
     if user.avatar?
-      image_tag user.avatar.url, size: "#{size}"
+      image_tag user.avatar.url
     else
       gravatar_id = Digest::MD5::hexdigest user.email.downcase
       size = options[:size]
@@ -10,9 +10,8 @@ module ApplicationHelper
     end
   end
 
-  def link_to_remove_fields f
-    f.hidden_field :_destroy
-    link_to "#", onclick: "remove_fields(this)" do
+  def link_to_remove_fields
+    link_to "#", onclick: "remove_fields(event, this)" do
       content_tag :span, "", class: "glyphicon glyphicon-minus"
     end
   end
@@ -23,7 +22,7 @@ module ApplicationHelper
     fields = f.fields_for association, new_object, child_index: id do |builder|
       render(association.to_s.singularize + "_fields", f: builder)
     end
-    link_to "#", class: "add_fields", data: {id: id, fields: fields.gsub("\n", "")} do
+    link_to "#", onclick: "add_fields(event, this)", data: {id: id, fields: fields.gsub("\n", "")} do
       content_tag :span, "", class: "glyphicon glyphicon-plus"
     end
   end

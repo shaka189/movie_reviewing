@@ -16,23 +16,34 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-
-$(document).ready(function() {
-    $('.carousel').carousel({
-      interval: 6000
-    })
-});
-
 $(function() {
-  remove_fields = function(link){
+  $('.carousel').carousel({
+      interval: 6000
+  })
+    
+  remove_fields = function(event, link){
     $(link).prev('input[type=hidden]').val('1');
     $(link).closest('fieldset').hide();
+    event.preventDefault();
   };
 
-  $('.add_fields').on('click', function(event){
+  add_fields = function(event, link){
     var time = new Date().getTime();
-    var regexp = new RegExp($(this).data('id'), 'g');
-    $(this).before($(this).data('fields').replace(regexp, time));
+    var regexp = new RegExp($(link).data('id'), 'g');
+    $(link).before($(link).data('fields').replace(regexp, time));
     event.preventDefault();
-  })
+  }
+  
+  $('.cancellation-booking').on('click', function(event){
+    event.preventDefault();
+    var booking_id =  this.id;
+    $.ajax({
+      method: 'DELETE',
+      url: "/bookings/" + booking_id
+    }).success(function(data){
+      $('#booking-'+ booking_id).remove();
+      alert(data.content);
+    })
+  });
 });
+

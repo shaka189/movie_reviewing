@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171217205204) do
+ActiveRecord::Schema.define(version: 20171227092601) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
+    t.integer "watching_time_id"
     t.integer "quantity"
-    t.float "price"
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["watching_time_id"], name: "index_bookings_on_watching_time_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -61,6 +62,7 @@ ActiveRecord::Schema.define(version: 20171217205204) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "describe"
+    t.integer "status", default: 0
   end
 
   create_table "post_reviews", force: :cascade do |t|
@@ -107,14 +109,23 @@ ActiveRecord::Schema.define(version: 20171217205204) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  create_table "watching_times", force: :cascade do |t|
+  create_table "watching_days", force: :cascade do |t|
     t.integer "film_id"
     t.date "day_watching"
-    t.integer "total_ticket"
-    t.integer "remaining_ticket"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["film_id"], name: "index_watching_times_on_film_id"
+    t.index ["film_id"], name: "index_watching_days_on_film_id"
+  end
+
+  create_table "watching_times", force: :cascade do |t|
+    t.integer "watching_day_id"
+    t.datetime "time"
+    t.integer "total_ticket"
+    t.integer "remaining_ticket"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["watching_day_id"], name: "index_watching_times_on_watching_day_id"
   end
 
 end
