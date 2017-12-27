@@ -12,6 +12,8 @@ class UsersController < ApplicationController
   def show
     @posts = @user.post_reviews.paginate page: params[:page],
       per_page: Settings.paginate_number.per_page
+    @bookings = @user.bookings.paginate page: params[:page],
+      per_page: Settings.paginate_number.per_page
   end
 
   def new

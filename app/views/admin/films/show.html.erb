@@ -1,7 +1,7 @@
 <div class="container">
   <ul>
     <li> <%= @film.name %> </li>
-    <li> <%= @film.image %> </li>
+    <li> <%= image_tag @film.image.url if @film.image? %> </li>
     <li>
       <%= t "admin.films.index.play_time" %>: <%= @film.play_time %>
     </li>

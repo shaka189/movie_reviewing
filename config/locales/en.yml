@@ -42,7 +42,12 @@ en:
     active_account: "Account not activated."
     check_email: "Check your email for the activation link."
     invalid: "Invalid email/password combination"
-
+    wrong_quantity: "Quantity can't greater than remaining ticket"
+    booking_success: "Booking Succeeded!"
+    booking_fail: "Booking Failed!"
+    destroy_booking_success: "Succeeded cancellation  booking"
+    destroy_booking_fail: "Failed cancellation  booking"
+    
   form:
     name: "Name"
     dob: "Date of birth"
@@ -95,14 +100,23 @@ en:
         play_time: "Play time"
         imdb: "Imdb rate"
         describe: "Describe"
+        image: "Image"
+        status: "Status"
+        old: "Old"
+        now_playing: "Now Playing"
+        comming_soon: "Comming Soon"
       new:
         name: "Name"
         play_time: "Play time"
         imdb: "Imdb rate"
         describe: "Describe"
-      watching_time_fields:
+      watching_day_fields:
         watching_day: "Watching Day"
+      watching_time_fields:
+        watching_time: "Watching Time"
+        time: "Time"
         total_ticket: "Total Ticket"
+        price: "Price"
       film_form:
         categories: "Categories"
   sessions:
@@ -124,7 +138,6 @@ en:
   share:
     error_messages:
       error: "Error"
-
   users:
     edit:
       update_profile: "Update Your Profile"
@@ -139,6 +152,11 @@ en:
       edit: "Edit Profile"
       hello: "Hello"
       create_new_post: "Create New Post"
+      my_booking: "My Booking"
+      film_name: "Film Name"
+      day_watching: "Day Watching"
+      time: "Time Watching"
+      quantity: "Quantity"
     index:
       all_user: "All User"
     new:
@@ -180,4 +198,16 @@ en:
       content: "Content"
       approve: "Approve"
       my_post_list: "My Post"
-
+    booking:
+      cancellation: "Cancellation"
+      you_sure: "You sure?"
+  bookings:
+    index:
+      booking_online: "Booking Online"
+      booking_ticket: "Booking Ticket"
+      day_watching: "Day Watching"
+      time: "Time Start"
+      quantity: "Quantity"
+      price: "Price"
+      total_price: "Total Price"
+      remaining_ticket: "Remanining Ticket"

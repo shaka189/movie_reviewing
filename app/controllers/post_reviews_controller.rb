@@ -3,8 +3,7 @@ class PostReviewsController < ApplicationController
 
   def index
     @posts = PostReview.paginate page: params[:page],
-     per_page:
-      Settings.paginate_number.per_page
+     per_page: Settings.paginate_number.per_page
   end
 
   def new
