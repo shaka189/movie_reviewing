@@ -47,7 +47,8 @@ en:
     booking_fail: "Booking Failed!"
     destroy_booking_success: "Succeeded cancellation  booking"
     destroy_booking_fail: "Failed cancellation  booking"
-    
+    search_failed: "Can't find the result"
+
   form:
     name: "Name"
     dob: "Date of birth"
@@ -69,6 +70,7 @@ en:
       logout: "Log out"
       sign_up: " SignUp"
       profile: "Profile"
+      booking: "Booking"
     footer:
       address: "Address"
       about_us: "About Us"
@@ -76,6 +78,11 @@ en:
       language: "Language"
       english: "English"
       vietnamese: "Vietnamese"
+    search:
+      all: "All"
+      name: "Film Name"
+      category: Category
+      post: "Post"
   pages:
     home:
       top_movie: "Top 10 movie in week"

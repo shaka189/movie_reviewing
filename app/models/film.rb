@@ -13,12 +13,16 @@ class Film < ApplicationRecord
   accepts_nested_attributes_for :watching_days, allow_destroy: true
   scope :desc_create_time, -> {order(created_at: :desc)}
   FILM_STATUS = {"old": "0", "now_playing": "1", "comming_soon": "2"}
-  
+
   def reject_categories(attributes)
     attributes["content"].blank?
   end
-  
+
   def self.film_now_playing
-    Film.where(status: 1)
+    where(status: 1)
   end
+
+  scope :search_film, -> (content){
+    where("name LIKE ?", "%#{content}%")
+  }
 end

@@ -7,4 +7,8 @@ class PostReview < ApplicationRecord
   def approve_post?
     self.approve
   end
+
+  scope :search_post, -> (content){
+    where("title LIKE ? OR content LIKE ? and approve = ?", "%#{content}%", "%#{content}%", true)
+  }
 end

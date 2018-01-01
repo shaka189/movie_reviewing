@@ -20,7 +20,7 @@ $(function() {
   $('.carousel').carousel({
       interval: 6000
   })
-    
+
   remove_fields = function(event, link){
     $(link).prev('input[type=hidden]').val('1');
     $(link).closest('fieldset').hide();
@@ -33,7 +33,7 @@ $(function() {
     $(link).before($(link).data('fields').replace(regexp, time));
     event.preventDefault();
   }
-  
+
   $('.cancellation-booking').on('click', function(event){
     event.preventDefault();
     var booking_id =  this.id;
@@ -45,5 +45,13 @@ $(function() {
       alert(data.content);
     })
   });
+
+  sessionStorage.setItem("SelItem", "all");
+  $('#search_option').on('click', function() {
+    var selVal = $(this).val();
+    sessionStorage.setItem("SelItem", selVal);
+  });
+  var selItem = sessionStorage.getItem('SelItem');
+  $('#search_option').val(selItem).attr('selected');
 });
 
