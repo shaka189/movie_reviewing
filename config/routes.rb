@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :post_reviews
   resources :bookings, only: [:index, :create, :destroy]
   resources :films, only: [:show]
+  resources :ratings, only: [:create, :update, :destroy]
 
   namespace :admin do
     root "admin#index"

@@ -3,6 +3,7 @@ class Film < ApplicationRecord
   has_many :watching_days, dependent: :destroy
   has_many :users, through: :ratings
   has_many :watching_times, through: :watching_days
+  has_many :ratings, dependent: :destroy
   validates :name, presence: true
   validates :play_time, presence: true
   validates :describe, presence: true,

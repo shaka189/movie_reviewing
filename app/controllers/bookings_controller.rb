@@ -30,12 +30,12 @@ class BookingsController < ApplicationController
     @booking.add_remaining_ticket @watching_time
     if @booking.destroy
       render json: {
-       content: t("flash.destroy_booking_success")
+       status: "success"
       }
     else
       @booking.sub_remaining_ticket @watching_time
       render json: {
-       content: t("flash.destroy_booking_fail")
+        status: "error"
       }
     end
   end
