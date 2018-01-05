@@ -78,25 +78,27 @@ p {
   margin-left: 300px
 }
 #user_profile {
-  width: 180px;
+  width: 200px;
   color: $white;
   cursor: pointer;
   img {
     margin-top: 5px;
     border-radius: 50%;
+    padding-right: 10;
+    float: left;
+    width: 40px;
+    height: 40px;
   }
   .user_name {
-    padding-top: 12px;
+    padding-top: 15px;
+    padding-left: 50px;
   }
   .dropdown-menu{
-    width: 182px;
+    width: 195px;
     top: 50px;
   }
 }
-#size_for_avatar {
-  width: 40px;
-  height: 40px;
-}
+
 /* forms */
 input, textarea, select, .uneditable-input {
   border: 1px solid $gray;

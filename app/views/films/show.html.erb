@@ -1,0 +1,21 @@
+<div class="container">
+  <ul>
+    <li> <%= @film.name %> </li>
+    <li> <%= @film.image %> </li>
+    <li>
+      <%= t "admin.films.index.play_time" %>: <%= @film.play_time %>
+    </li>
+    <li>
+      <%= t "admin.films.index.imdb_rate" %>: <%= @film.imdb_rate %>
+    </li>
+    <li>
+      <%= raw @film.link_trailer %>
+    </li>
+    <li> <%= @film.describe %> </li>
+  </ul>
+  <ol>
+    <%= @film.categories.each do |category| %>
+      <li><%= category.content %></li>
+    <% end %>
+  </ol>
+</div>
