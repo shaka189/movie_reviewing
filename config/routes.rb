@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   get "pages/help"
   get "/signup",  to: "users#new"
   get "/login",   to: "sessions#new"
+  get "/search", to: "searchs#index"
   post "/login",   to: "sessions#create"
   delete "/logout",  to: "sessions#destroy"
+
   resources :account_activations, only: [:edit]
   resources :sessions, only: [:create, :destroy]
   resources :password_resets, only: [:new, :create, :edit, :update]
@@ -15,7 +17,7 @@ Rails.application.routes.draw do
   resources :post_reviews
   resources :bookings, only: [:index, :create, :destroy]
   resources :films, only: [:show]
-  
+
   namespace :admin do
     root "admin#index"
     resources :films

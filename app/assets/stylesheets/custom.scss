@@ -75,7 +75,7 @@ p {
   text-decoration: none;
 }
 .fix-form-position {
-  margin-left: 300px
+  margin: 0 300px 0;
 }
 #user_profile {
   width: 200px;
@@ -174,8 +174,13 @@ input.user-sex {
 }
 
 .form-group .search-input {
-  margin-bottom: 0;
+  margin: 8px 0px;
 }
+
+.form-group {
+  float: left;
+}
+
 /* Users index */
 .users {
   list-style: none;

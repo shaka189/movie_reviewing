@@ -47,6 +47,7 @@ vi:
     booking_fail: "Đặt vé thất bại!"
     destroy_booking_success: "Hủy đặt vé thành công"
     destroy_booking_fail: "Hủy đặt vé thất bại"
+    search_failed: "Không tìm thấy kết quả"
 
   form:
     name: "Tên người dùng"
@@ -68,7 +69,8 @@ vi:
       login: " Đăng nhập"
       logout: "Đăng xuất"
       sign_up: " Đăng ký"
-      profile: "Profile"
+      profile: "Thông tin cá nhân"
+      booking: "Đặt vé"
     footer:
       address: "Địa chỉ"
       about_us: "Về chúng tôi"
@@ -76,6 +78,11 @@ vi:
       language: "Ngôn ngữ"
       english: "Tiếng Anh"
       vietnamese: "Tiếng Việt"
+    search:
+      all: "Tất cả"
+      name: "Tên phim"
+      category: "Thể loại"
+      post: "Bài đăng"
   pages:
     home:
       top_movie: "Top 10 phim ăn khách trong tuần"
