@@ -48,6 +48,7 @@ en:
     destroy_booking_success: "Succeeded cancellation  booking"
     destroy_booking_fail: "Failed cancellation  booking"
     search_failed: "Can't find the result"
+    post_load_fail: "Can't load post"
 
   form:
     name: "Name"
@@ -86,6 +87,7 @@ en:
   pages:
     home:
       top_movie: "Top 10 movie in week"
+
   admin:
     films:
       index:
@@ -126,6 +128,14 @@ en:
         price: "Price"
       film_form:
         categories: "Categories"
+    post:
+      list_posts: "List posts"
+      list_pending: "List Pending"
+      list_approved: "List Approved"
+      manager_post: "Manager Post"
+      approve: "Approve"
+      unapprove: "Unapprove"
+
   sessions:
     new:
       input_email: "Please input your email here"

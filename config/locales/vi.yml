@@ -40,7 +40,7 @@ vi:
     post_update_success: "Cập nhật thành công"
     permission_access: "Bạn không có quyền truy cập"
     active_account: "Tài khoản chưa được kích hoạt"
-    check_email: " Kiểm tra email để kích hoạt tài khoản"
+    check_email: "Kiểm tra email để kích hoạt tài khoản"
     invalid: "Email hoặc mật khẩu của bạn không đúng"
     wrong_quantity: "Số lượng đặt không được lớn hơn số vé còn lại"
     booking_success: "Đặt vé thành công!"
@@ -48,6 +48,7 @@ vi:
     destroy_booking_success: "Hủy đặt vé thành công"
     destroy_booking_fail: "Hủy đặt vé thất bại"
     search_failed: "Không tìm thấy kết quả"
+    post_load_fail: "Không tải được bài viết"
 
   form:
     name: "Tên người dùng"
@@ -86,6 +87,7 @@ vi:
   pages:
     home:
       top_movie: "Top 10 phim ăn khách trong tuần"
+
   admin:
     films:
       index:
@@ -126,6 +128,14 @@ vi:
         time: "Thời gian bắt đầu"
       film_form:
         categories: "Thể loại"
+    post:
+      list_posts: "Danh sách bài viết"
+      list_pending: "Bài viết đang chờ"
+      list_approved: "Bài viết đã duyệt"
+      manager_post: "Quản lí bài viết"
+      approve: "Phê duyệt"
+      unapprove: "Hủy phê duyệt"
+
   sessions:
     new:
       input_email: "Nhập email vào đây"
