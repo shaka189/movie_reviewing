@@ -3,9 +3,12 @@ class PostReview < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :ratings
   validates :title,  presence: true, length: {maximum: Settings.user.name_maximum}
+  scope :pending, -> {where(:approve => true)}
+  scope :approved, -> {where(:approve => false)}
+  scope :newest, -> {order("created_at desc")}
 
-  def approve_post?
-    self.approve
+  def approved_post
+    where(approve: true)
   end
 
   scope :search_post, -> (content){

@@ -1,6 +1,14 @@
 class PostReviewsController < ApplicationController
   before_action :load_post, except: [:index, :new, :create]
 
+  def show
+    if current_user != @post.user
+      return if @post.approve?
+      flash[:danger] = t "flash.permission_access"
+      redirect_to root_path
+    end
+  end
+
   def index
     @posts = PostReview.paginate page: params[:page],
      per_page: Settings.paginate_number.per_page
@@ -12,6 +20,9 @@ class PostReviewsController < ApplicationController
 
   def create
     @post = current_user.post_reviews.build post_params
+    if current_user.admin?
+      @post.approve = true
+    end
     if @post.save
       flash[:success] = t "flash.create_post_success"
       redirect_to post_review_path @post
@@ -22,25 +33,33 @@ class PostReviewsController < ApplicationController
   end
 
   def update
-    @user = User.find_by params[:user_id]
-    if @post.update_attributes post_params
-      flash[:success] = t "flash.update_success"
+    if current_user != @post.user
+      return if @post.approve?
+      flash[:danger] = t "flash.permission_access"
+      redirect_to root_path
     else
-      flash[:danger] = t "flash.update_fail"
+      if @post.update_attributes post_params
+        flash[:success] = t "flash.update_success"
+      else
+        flash[:danger] = t "flash.update_fail"
+      end
+      redirect_to post_review_path @post
     end
-    redirect_to post_review_path @post
   end
 
   def destroy
-    if @post.destroy
-      flash[:success] = t "flash.destroy_post_success"
+    if current_user != @post.user
+      return if @post.approve?
+      flash[:danger] = t "flash.permission_access"
+      redirect_to root_path
     else
-      flash[:danger] = t "flash.destroy_post_fail"
+      if @post.destroy
+        flash[:success] = t "flash.destroy_post_success"
+      else
+        flash[:danger] = t "flash.destroy_post_fail"
+      end
+      redirect_to user_path current_user
     end
-    redirect_to user_path current_user
-  end
-
-  def show
   end
 
   private
@@ -48,7 +67,7 @@ class PostReviewsController < ApplicationController
   def load_post
     @post = PostReview.find_by id: params[:id]
     return if @post
-    flash[:danger] = t "flash.post_update_success"
+    flash[:danger] = t "flash.post_load_fail"
     redirect_to root_path
   end
 
