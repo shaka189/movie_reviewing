@@ -1,0 +1,19 @@
+$(function(){
+  $('.cancellation-booking').on('click', function(event){
+    event.preventDefault();
+    var booking_id =  this.id;
+    $.ajax({
+      method: 'DELETE',
+      url: "/bookings/" + booking_id
+    }).success(function(data){
+      if (data.status == "success"){
+        alert('<%= I18n.t("flash.destroy_booking_success") %>')
+      } else {
+        alert('<%= I18n.t("flash.destroy_booking_fail") %>')
+      }
+      $('#booking-'+ booking_id).remove();
+    }).error(function(){
+      alert('<%= I18n.t("flash.destroy_booking_fail") %>');
+    });
+  });
+})

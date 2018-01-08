@@ -1,4 +1,6 @@
 en:
+  alert:
+    login: "Please login!"
   flash:
     find_user: "Can't find user with id: "
     create_new_film: "Complete create film"
@@ -49,6 +51,12 @@ en:
     destroy_booking_fail: "Failed cancellation  booking"
     search_failed: "Can't find the result"
     post_load_fail: "Can't load post"
+    create_rate_succeed: "Rating succeed"
+    create_rate_failed: "Rating failed"
+    update_rate_succeed: "Update rate succeed"
+    update_rate_failed: "Update rate failed"
+    destroy_rate_succeed: "Delete rate succeed"
+    destroy_rate_failed: "Delete rate failed"
 
   form:
     name: "Name"
@@ -228,3 +236,13 @@ en:
       price: "Price"
       total_price: "Total Price"
       remaining_ticket: "Remanining Ticket"
+  films:
+    show:
+      submit: "Rating"
+      imdb_rates: "IMDB RATES"
+      audience_score: "AUDIENCE SCORE"
+      rating_film: "Rating Film"
+      describe: "Describe"
+      review_section: "REVIEW SECTION"
+    rating:
+      ago: "ago"

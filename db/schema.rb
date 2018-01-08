@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171227092601) do
+ActiveRecord::Schema.define(version: 20180102235636) do
 
-  create_table "bookings", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "watching_time_id"
+  create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "watching_time_id"
     t.integer "quantity"
     t.integer "status"
     t.datetime "created_at", null: false
@@ -23,15 +23,15 @@ ActiveRecord::Schema.define(version: 20171227092601) do
     t.index ["watching_time_id"], name: "index_bookings_on_watching_time_id"
   end
 
-  create_table "categories", force: :cascade do |t|
+  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "content"
-    t.integer "film_id"
+    t.bigint "film_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["film_id"], name: "index_categories_on_film_id"
   end
 
-  create_table "ckeditor_assets", force: :cascade do |t|
+  create_table "ckeditor_assets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "data_file_name", null: false
     t.string "data_content_type"
     t.integer "data_file_size"
@@ -43,9 +43,9 @@ ActiveRecord::Schema.define(version: 20171227092601) do
     t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "post_review_id"
+  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "post_review_id"
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -53,20 +53,21 @@ ActiveRecord::Schema.define(version: 20171227092601) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "films", force: :cascade do |t|
+  create_table "films", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.integer "play_time"
     t.string "link_trailer"
     t.string "image"
-    t.float "imdb_rate", default: 0.0
+    t.float "imdb_rate", limit: 24, default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "describe"
     t.integer "status", default: 0
+    t.float "avg_rate", limit: 24, default: 0.0
   end
 
-  create_table "post_reviews", force: :cascade do |t|
-    t.integer "user_id"
+  create_table "post_reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
     t.string "title"
     t.text "content"
     t.boolean "approve", default: false
@@ -76,18 +77,19 @@ ActiveRecord::Schema.define(version: 20171227092601) do
     t.index ["user_id"], name: "index_post_reviews_on_user_id"
   end
 
-  create_table "ratings", force: :cascade do |t|
-    t.integer "post_review_id"
-    t.integer "user_id"
+  create_table "ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "film_id"
+    t.bigint "user_id"
     t.integer "mark", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["post_review_id", "user_id"], name: "index_ratings_on_post_review_id_and_user_id", unique: true
-    t.index ["post_review_id"], name: "index_ratings_on_post_review_id"
+    t.text "review"
+    t.index ["film_id", "user_id"], name: "index_ratings_on_film_id_and_user_id", unique: true
+    t.index ["film_id"], name: "index_ratings_on_film_id"
     t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "avatar"
     t.string "email"
@@ -109,16 +111,16 @@ ActiveRecord::Schema.define(version: 20171227092601) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  create_table "watching_days", force: :cascade do |t|
-    t.integer "film_id"
+  create_table "watching_days", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "film_id"
     t.date "day_watching"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["film_id"], name: "index_watching_days_on_film_id"
   end
 
-  create_table "watching_times", force: :cascade do |t|
-    t.integer "watching_day_id"
+  create_table "watching_times", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "watching_day_id"
     t.datetime "time"
     t.integer "total_ticket"
     t.integer "remaining_ticket"
@@ -128,4 +130,5 @@ ActiveRecord::Schema.define(version: 20171227092601) do
     t.index ["watching_day_id"], name: "index_watching_times_on_watching_day_id"
   end
 
+  add_foreign_key "watching_times", "watching_days"
 end

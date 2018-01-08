@@ -32,7 +32,7 @@ end
                link_trailer: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Q0CbN8sfihY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>',
                image: open("https://resizing.flixster.com/eQ8z-h3mtqUCASBMi7empUwNFdU=/206x305/v1.bTsxMjU0NjIzNDtqOzE3NTYwOzEyMDA7MTY4ODsyNTAw"),
                imdb_rate: 3.5,
-               describe: "abc",
+               describe: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                status: "1",
                categories_attributes: [
                  {content: "234"},
@@ -153,4 +153,9 @@ end
                   }
                ]
               )
+end
+15.times do |n|
+  m = n+2
+  Rating.create!(film_id: 1, user_id: "#{m}", mark: "8", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+  Rating.create!(film_id: 2, user_id: "#{m}", mark: "8", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
 end

@@ -1,4 +1,6 @@
 vi:
+  alert:
+    login: "Vui lòng đăng nhập!"
   flash:
     find_user: "Không tìm thấy người dùng với id: "
     create_new_film: "Tạo phim mới thành công"
@@ -49,6 +51,12 @@ vi:
     destroy_booking_fail: "Hủy đặt vé thất bại"
     search_failed: "Không tìm thấy kết quả"
     post_load_fail: "Không tải được bài viết"
+    create_rate_succeed: "Đánh giá thành công"
+    create_rate_failed: "Đánh giá thất bại"
+    update_rate_succeed: "Cập nhật đánh giá thành công"
+    update_rate_failed: "Cập nhật đánh giá thất bại"
+    destroy_rate_succeed: "Xóa đánh giá thành công"
+    destroy_rate_failed: "Xóa đánh giá thất bại"
 
   form:
     name: "Tên người dùng"
@@ -229,3 +237,13 @@ vi:
       price: "Giá vé"
       total_price: "Tổng tiền"
       remaining_ticket: "Số vé còn lại"
+  films:
+    show:
+      submit: "Gửi đánh giá"
+      imdb_rates: "Điểm IMDB"
+      audience_score: "Đánh giá của khán giả"
+      rating_film: "Đánh giá phim"
+      describe: "Mô tả"
+      review_section: "ĐÁNH GIÁ"
+    rating:
+      ago: "trước"
