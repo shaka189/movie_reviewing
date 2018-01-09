@@ -47,6 +47,6 @@ module SessionsHelper
   end
 
   def store_location
-    session[:forwarding_url] = request.original_url if request.get?
+    session[:forwarding_url] = request.env['HTTP_REFERER']
   end
 end

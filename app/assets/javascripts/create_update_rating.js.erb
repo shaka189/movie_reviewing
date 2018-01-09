@@ -56,7 +56,7 @@ $(function() {
         alert('<%= I18n.t("flash.update_rate_failed") %>');
       });
     } else {
-      alert('<%= I18n.t("alert.login") %>');
+      $("#Login_Modal").modal();
     }
   });
 });

@@ -30,12 +30,12 @@ class BookingsController < ApplicationController
     @booking.add_remaining_ticket @watching_time
     if @booking.destroy
       render json: {
-       status: "success"
+       status: :success
       }
     else
       @booking.sub_remaining_ticket @watching_time
       render json: {
-        status: "error"
+        status: :error
       }
     end
   end
