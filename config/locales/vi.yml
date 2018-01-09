@@ -57,6 +57,9 @@ vi:
     update_rate_failed: "Cập nhật đánh giá thất bại"
     destroy_rate_succeed: "Xóa đánh giá thành công"
     destroy_rate_failed: "Xóa đánh giá thất bại"
+    login_face_failed: "Login via Facebook failed"
+    destroy_comment_failed: "Không xóa được bình luận"
+    create_comment_failed: "Không tạo được bình luận"
 
   form:
     name: "Tên người dùng"
@@ -92,6 +95,7 @@ vi:
       name: "Tên phim"
       category: "Thể loại"
       post: "Bài đăng"
+
   pages:
     home:
       top_movie: "Top 10 phim ăn khách trong tuần"
@@ -143,6 +147,7 @@ vi:
       manager_post: "Quản lí bài viết"
       approve: "Phê duyệt"
       unapprove: "Hủy phê duyệt"
+      back_to_post: "Quay trở lại"
 
   sessions:
     new:
@@ -160,6 +165,7 @@ vi:
       forgot_password: "Quên mật khẩu"
     edit:
       reset_password: "Khôi phục mật khẩu"
+
   share:
     error_messages:
       error: "Lỗi"
@@ -202,6 +208,7 @@ vi:
     index:
       my_post: "Danh sách bài viết của tôi"
       approve: "Phê duyệt"
+      time: "Đăng ngày "
     edit:
       edit_post: "Sửa bài viết"
     form:
@@ -211,6 +218,12 @@ vi:
       title: "Tiêu đề(Tối đa 50 kí tự)"
       content: "Nội dung"
       back_to_profile: "Trở về trang cá nhân của tôi"
+      image: "Ảnh bìa"
+    comment:
+      confirm: "Bạn chắc chắn muốn xóa không?"
+      ago: "trước"
+      comment: "Bình luận"
+      submit: "Đăng"
 
   shared:
     post:
@@ -227,6 +240,7 @@ vi:
     booking:
       cancellation: "Hủy bỏ"
       you_sure: "Bạn có chắc muốn hủy vé không?"
+
   bookings:
     index:
       booking_online: "Đặt vé trực tuyến"
@@ -237,6 +251,7 @@ vi:
       price: "Giá vé"
       total_price: "Tổng tiền"
       remaining_ticket: "Số vé còn lại"
+
   films:
     show:
       submit: "Gửi đánh giá"

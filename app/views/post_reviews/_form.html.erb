@@ -5,5 +5,10 @@
   <%= f.label :content, t(".content") %>
   <%= f.cktext_area :content, class: "form-control" %>
   </br>
+    <span class="picture">
+        <%= f.label :image, t("post_reviews.form.image") %>
+        <%= f.file_field :image %>
+    </span>
+    </br>
   <%= f.submit t(".submit_edit"), class: "btn btn-primary" %>
 <% end %>

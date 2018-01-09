@@ -2,7 +2,9 @@ class PostReviewsController < ApplicationController
   before_action :load_post, except: [:index, :new, :create]
 
   def show
-    if current_user != @post.user
+    @comments = @post.comments.desc_create_at.paginate page: params[:page],
+      per_page: Settings.paginate_number.per_page
+    if current_user != @post.user && !current_user.admin?
       return if @post.approve?
       flash[:danger] = t "flash.permission_access"
       redirect_to root_path
@@ -33,7 +35,7 @@ class PostReviewsController < ApplicationController
   end
 
   def update
-    if current_user != @post.user
+    if current_user != @post.user && !current_user.admin?
       return if @post.approve?
       flash[:danger] = t "flash.permission_access"
       redirect_to root_path
@@ -48,7 +50,7 @@ class PostReviewsController < ApplicationController
   end
 
   def destroy
-    if current_user != @post.user
+    if current_user != @post.user && !current_user.admin?
       return if @post.approve?
       flash[:danger] = t "flash.permission_access"
       redirect_to root_path
@@ -72,6 +74,6 @@ class PostReviewsController < ApplicationController
   end
 
   def post_params
-    params.require(:post_review).permit :title, :content
+    params.require(:post_review).permit :title, :content, :approve, :image
   end
 end
