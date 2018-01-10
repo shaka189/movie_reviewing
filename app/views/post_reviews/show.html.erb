@@ -2,6 +2,7 @@
   <div class="row">
     <tr>
       <td><h1><%= raw @post.title %></h1></td>
+      <%= render "shared/share_facebook_button" %>
       <td><%= raw @post.content %></td>
     </tr>
     <%= link_to t("post_reviews.form.back_to_profile"), current_user %>
