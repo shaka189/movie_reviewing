@@ -39,16 +39,18 @@
   </div>
 
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home"><%= t "shared.index.my_post_list" %></a></li>
-    <li><a data-toggle="tab" href="#menu1"><%= t ".my_booking" %></a></li>
+    <li class="active"><a data-toggle="tab" href="#myPost">
+      <%= t "shared.index.my_post_list" %></a></li>
+    <li><a data-toggle="tab" href="#myBooking"><%= t ".my_booking" %></a></li>
   </ul>
   <div class="tab-content">
-    <div id="home" class="tab-pane fade in active"></br>
-      <%= link_to t(".create_new_post"), new_post_review_path(@user), class: "btn btn-info" %>
+    <div id="myPost" class="tab-pane fade in active"></br>
+      <%= link_to t(".create_new_post"), new_post_review_path(@user),
+        class: "btn btn-info" %>
       <%= render "shared/index" %>
 
     </div>
-    <div id="menu1" class="tab-pane fade"></br>
+    <div id="myBooking" class="tab-pane fade"></br>
       <table class="table table-striped">
         <thead>
           <tr>

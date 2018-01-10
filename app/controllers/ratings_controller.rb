@@ -11,6 +11,7 @@ class RatingsController < ApplicationController
       if @rating.update_attributes rating_params
         render json: {
           status: :success,
+          message: t("flash.update_rate_succeed"),
           content: render_to_string(partial: "films/rating",
             locals: {rating: @rating}),
           id: @rating.id,
@@ -32,11 +33,11 @@ class RatingsController < ApplicationController
     @rating = Rating.find_by id: params[:id]
     if @rating.destroy
       render json: {
-        message: t('flash.destroy_rate_succeed')
+        status: :success
       }
     else
       render json: {
-        message: t('flash.destroy_rate_failed')
+        status: :error
       }
     end
   end

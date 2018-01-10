@@ -146,13 +146,13 @@ vi:
 
   sessions:
     new:
-      input_email: "Nhập email vào đây"
-      input_password: "Nhập mật khẩu vào đây"
+      input_email: " Địa Chỉ Email"
+      input_password: "Mật Khẩu"
       remember_me: "Nhớ tài khoản"
       login: "Đăng nhập"
       sign_up: "Đăng kí tài khoản"
       new_user: "Người dùng mới"
-      forgot_password: "(quên mật khẩu)"
+      forgot_password: "Quên mật khẩu"
 
   password_resets:
     new:

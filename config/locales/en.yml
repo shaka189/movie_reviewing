@@ -57,6 +57,7 @@ en:
     update_rate_failed: "Update rate failed"
     destroy_rate_succeed: "Delete rate succeed"
     destroy_rate_failed: "Delete rate failed"
+    login_face_failed: "Login via Facebook failed"
 
   form:
     name: "Name"
@@ -111,7 +112,7 @@ en:
       film:
         edit_film: "Edit Film"
         delete: "Delete"
-        you_sure: "You sure?"
+        you_sure: "Are you sure?"
       edit:
         name: "Name"
         play_time: "Play time"
@@ -146,13 +147,13 @@ en:
 
   sessions:
     new:
-      input_email: "Please input your email here"
-      input_password: "Input your password"
+      input_email: "Email"
+      input_password: "Password"
       remember_me: "Remember me on this computer"
       login: "Log in"
       sign_up: "Sign up now!"
       new_user: "New user?"
-      forgot_password: "(forgot password)"
+      forgot_password: "Forgot password"
 
   password_resets:
     new:
@@ -191,7 +192,7 @@ en:
       input_dob: "Input your date of birth here"
       input_email: "Please input your email here"
       input_password: "Input your password"
-      input_password_confirm: "input your password confirmation"
+      input_password_confirm: "Input your password confirmation"
       create: "Create my account"
       save_change: "Save changes"
 
