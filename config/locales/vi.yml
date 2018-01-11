@@ -57,7 +57,7 @@ vi:
     update_rate_failed: "Cập nhật đánh giá thất bại"
     destroy_rate_succeed: "Xóa đánh giá thành công"
     destroy_rate_failed: "Xóa đánh giá thất bại"
-    login_face_failed: "Login via Facebook failed"
+    login_face_failed: "Đăng nhập Facebook thất bại"
     destroy_comment_failed: "Không xóa được bình luận"
     create_comment_failed: "Không tạo được bình luận"
 
@@ -110,7 +110,8 @@ vi:
         play_time: "Thời lượng"
         trailer: "Link Trailer"
         imdb_rate: "Điểm IMDB"
-        describe: "Mô tả"
+        status: "Trạng thái"
+        avg_rate: "Điểm người dùng"
         submit: "Gửi"
       film:
         edit_film: "Chỉnh sửa phim"
@@ -141,6 +142,7 @@ vi:
       film_form:
         categories: "Thể loại"
     post:
+      post_review: "Bài Viết"
       list_posts: "Danh sách bài viết"
       list_pending: "Bài viết đang chờ"
       list_approved: "Bài viết đã duyệt"
@@ -148,6 +150,8 @@ vi:
       approve: "Phê duyệt"
       unapprove: "Hủy phê duyệt"
       back_to_post: "Quay trở lại"
+    admin:
+      film: "Phim"
 
   sessions:
     new:
@@ -260,5 +264,9 @@ vi:
       rating_film: "Đánh giá phim"
       describe: "Mô tả"
       review_section: "ĐÁNH GIÁ"
+      play_time: "Thời lượng"
+      minutes: "phút"
+      categories: "Thể loại"
+      watching_day: "Ngày chiếu"
     rating:
       ago: "trước"
