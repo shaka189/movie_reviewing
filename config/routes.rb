@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :users
-  resources :post_reviews
+  resources :post_reviews, except: [:index] do
+    resources :comments
+  end
   resources :bookings, only: [:index, :create, :destroy]
   resources :films, only: [:show]
   resources :ratings, only: [:create, :update, :destroy]

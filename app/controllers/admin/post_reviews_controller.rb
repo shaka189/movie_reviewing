@@ -53,6 +53,6 @@ class Admin::PostReviewsController < Admin::BaseController
   end
 
   def post_params
-    params.require(:post_review).permit :title, :content, :approve
+    params.require(:post_review).permit :title, :content, :approve, :image
   end
 end

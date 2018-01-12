@@ -1,10 +1,31 @@
 <div class="container">
   <div class="row">
-    <tr>
-      <td><h1><%= raw @post.title %></h1></td>
-      <%= render "shared/share_facebook_button" %>
-      <td><%= raw @post.content %></td>
-    </tr>
-    <%= link_to t("post_reviews.form.back_to_profile"), current_user %>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row well">
+        <tr>
+          <td><h1><%= raw @post.title %></h1></td>
+          <%= render "shared/share_facebook_button" %>
+          <td><i><%= t "post_reviews.index.time" %>
+          <%= @post.updated_at.strftime("%d-%m-%Y") %>&nbsp</i></td>
+          <br/><br/>
+          <td><%= raw @post.content %></td>
+        </tr>
+        <br/>
+      </div>
+      <% if current_user.admin? %>
+        <%= link_to t("admin.post.back_to_post"), admin_post_reviews_path %>
+      <% else %>
+        <%= link_to t("post_reviews.form.back_to_profile"), current_user %>
+      <%end%>
+      <div class="col-md-12">
+        <br/>
+        <%= render "comment/form" %>
+        <br/>
+      </div>
+      <div class="row well header-comment">
+        <%= render partial: 'comment/comment', collection: @comments %>
+        <%= will_paginate @comments %>
+      </div>
+    </div>
   </div>
 </div>

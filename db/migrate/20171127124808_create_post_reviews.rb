@@ -5,7 +5,7 @@ class CreatePostReviews < ActiveRecord::Migration[5.1]
       t.string :title
       t.text :content
       t.boolean :approve, default: false
-
+      t.string :image
       t.timestamps
     end
     add_index :post_reviews, [:user_id, :created_at]

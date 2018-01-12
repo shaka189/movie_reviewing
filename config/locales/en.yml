@@ -58,6 +58,8 @@ en:
     destroy_rate_succeed: "Delete rate succeed"
     destroy_rate_failed: "Delete rate failed"
     login_face_failed: "Login via Facebook failed"
+    destroy_comment_failed: "Delete comment failed"
+    create_comment_failed: "Create comment failed"
 
   form:
     name: "Name"
@@ -93,6 +95,7 @@ en:
       name: "Film Name"
       category: Category
       post: "Post"
+
   pages:
     home:
       top_movie: "Top 10 movie in week"
@@ -144,6 +147,7 @@ en:
       manager_post: "Manager Post"
       approve: "Approve"
       unapprove: "Unapprove"
+      back_to_post: "Back"
 
   sessions:
     new:
@@ -161,9 +165,11 @@ en:
       forgot_password: "Forgot password"
     edit:
       reset_password: "Reset password"
+
   share:
     error_messages:
       error: "Error"
+
   users:
     edit:
       update_profile: "Update Your Profile"
@@ -202,6 +208,7 @@ en:
     index:
       my_post: "List Post "
       approve: "Approve"
+      time: "Posted in "
     edit:
       edit_post: "Edit Post"
     form:
@@ -211,6 +218,12 @@ en:
       title: "Title(Max 50 character)"
       content: "Content"
       back_to_profile: "Back to my profile"
+      image: "Image"
+    comment:
+      confirm: "You sure?"
+      ago: "ago"
+      comment: "Comment"
+      submit: "Post"
 
   shared:
     post:
@@ -227,6 +240,7 @@ en:
     booking:
       cancellation: "Cancellation"
       you_sure: "You sure?"
+
   bookings:
     index:
       booking_online: "Booking Online"
@@ -237,6 +251,7 @@ en:
       price: "Price"
       total_price: "Total Price"
       remaining_ticket: "Remanining Ticket"
+
   films:
     show:
       submit: "Rating"
