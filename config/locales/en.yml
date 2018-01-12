@@ -110,7 +110,8 @@ en:
         play_time: "Play Time"
         trailer: "Link Trailer"
         imdb_rate: "IDBM Rate"
-        describe: "Describe"
+        status: "Status"
+        avg_rate: "Audience Rate"
         submit: "Submit"
       film:
         edit_film: "Edit Film"
@@ -141,6 +142,7 @@ en:
       film_form:
         categories: "Categories"
     post:
+      post_review: "Post Review"
       list_posts: "List posts"
       list_pending: "List Pending"
       list_approved: "List Approved"
@@ -148,6 +150,9 @@ en:
       approve: "Approve"
       unapprove: "Unapprove"
       back_to_post: "Back"
+    admin:
+      film: "Film"
+
 
   sessions:
     new:
@@ -260,5 +265,9 @@ en:
       rating_film: "Rating Film"
       describe: "Describe"
       review_section: "REVIEW SECTION"
+      play_time: "Play Time"
+      minutes: "minutes"
+      categories: "Categories"
+      watching_day: "Watching Day"
     rating:
       ago: "ago"
