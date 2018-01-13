@@ -61,6 +61,9 @@ vi:
     destroy_comment_failed: "Không xóa được bình luận"
     create_comment_failed: "Không tạo được bình luận"
 
+  export:
+    export_excel: "Kết xuất bảng excel"
+
   form:
     name: "Tên người dùng"
     dob: "Ngày tháng năm sinh"

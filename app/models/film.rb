@@ -14,9 +14,9 @@ class Film < ApplicationRecord
   accepts_nested_attributes_for :watching_days, allow_destroy: true
   scope :desc_create_time, -> {order(created_at: :desc)}
   FILM_STATUS = {"old": "0", "now_playing": "1", "comming_soon": "2"}
-  
+
   def self.select_film
-    select("id, name, play_time, imdb_rate, status, avg_rate")    
+    select("id, name, play_time, imdb_rate, status, avg_rate")
   end
 
   def reject_categories(attributes)
