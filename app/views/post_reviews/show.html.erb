@@ -4,6 +4,13 @@
       <div class="row well">
         <tr>
           <td><h1><%= raw @post.title %></h1></td>
+          <div class = "button-like" id= "<%= @like.present? ? @like.id : 0 %>">
+            <% if logged_in? %>
+              <%= render "likes/like" %>
+              <%= render "likes/unlike" %>
+            <% end %>
+          </div>
+          <br/>
           <%= render "shared/share_facebook_button" %>
           <td><i><%= t "post_reviews.index.time" %>
           <%= @post.updated_at.strftime("%d-%m-%Y") %>&nbsp</i></td>
