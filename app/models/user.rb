@@ -78,6 +78,10 @@ class User < ApplicationRecord
     end
   end
 
+  def self.new_users
+    where("created_at > ?", Time.new.beginning_of_day)
+  end
+
   private
 
   def downcase_email

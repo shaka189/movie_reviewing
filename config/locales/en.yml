@@ -162,6 +162,12 @@ en:
       user: "Users"
       booking: "Bookings"
       comment: "Comments"
+      index:
+        new_users: "New Users"
+        new_post_reviews: "New Posts Review"
+        new_bookings: "New Bookings"
+        new_comments: "New Comments"
+
     users:
       index:
         name: "User Name"

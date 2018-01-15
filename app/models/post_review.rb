@@ -14,4 +14,8 @@ class PostReview < ApplicationRecord
   scope :search_post, -> (content){
     where("title LIKE ? OR content LIKE ? and approve = ?", "%#{content}%", "%#{content}%", true)
   }
+  
+  def self.new_post_reviews
+    where("created_at > ?", Time.new.beginning_of_day)
+  end
 end

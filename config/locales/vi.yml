@@ -156,13 +156,21 @@ vi:
       approve: "Phê duyệt"
       unapprove: "Hủy phê duyệt"
       back_to_post: "Quay trở lại"
-      pie_chart_post_reviews: "Biểu đồ tròn chia theo tỷ lệ phê duyệt"
+      pie_chart_post_reviews: "Biểu đồ tròn của bài đăng chia theo tỷ lệ phê duyệt"
+
     admin:
       film: "Phim"
       user: "Người dùng"
       film: "Phim"
       booking: "Đặt vé"
       comment: "Bình luận"
+
+      index:
+        new_users: "Người dùng mới"
+        new_post_reviews: "Bài viết mới"
+        new_bookings: "Đặt vé mới"
+        new_comments: "Bình luận mới"
+
     users:
       index:
         name: "Tên người dùng"
@@ -191,7 +199,7 @@ vi:
         watching_time: "Giờ chiếu"
         quantity: "Số lượng"
         price: "Giá vé"
-        pie_chart_bookings: "Biểu đồ tròn chia theo thời gian chiếu"
+        pie_chart_bookings: "Biểu đồ tròn đặt vé theo thời gian chiếu"
 
   sessions:
     new:

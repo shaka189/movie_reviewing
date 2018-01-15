@@ -234,6 +234,7 @@ span.picture {
 footer {
   padding-top: 20px;
   border-top: 1px solid $gray;
+  margin-top: 20px;
 }
 
 img {
@@ -448,4 +449,11 @@ iframe {
 
 .delete_comment:hover {
   cursor: pointer;
+}
+
+.chart-dashboard {
+  border: 1px solid #eaeaea;
+}
+.tab-table-content{
+  margin-top: 40px;
 }
