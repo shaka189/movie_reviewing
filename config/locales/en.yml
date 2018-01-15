@@ -61,6 +61,9 @@ en:
     destroy_comment_failed: "Delete comment failed"
     create_comment_failed: "Create comment failed"
 
+  export:
+    export_excel: "Export Excel"
+
   form:
     name: "Name"
     dob: "Date of birth"
@@ -152,7 +155,6 @@ en:
       back_to_post: "Back"
     admin:
       film: "Film"
-
 
   sessions:
     new:
