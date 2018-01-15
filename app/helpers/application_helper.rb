@@ -26,4 +26,22 @@ module ApplicationHelper
       content_tag :span, "", class: "glyphicon glyphicon-plus"
     end
   end
+
+  def chart_post_review
+    PostReview.group(:approve).count
+  end
+
+  def chart_film
+    Film.joins(:categories).group(:content).count
+  end
+
+  def chart_booking
+    @chart_booking = Booking.joins(:watching_time).group(:time).count
+    @chart_booking.map{|key, value| [key.to_time.to_formatted_s(:time), value]}
+  end
+
+  def chart_user
+    @chart_user = User.group(:created_at).count
+    @chart_user.map{|key, value| [key.strftime("%d-%m-%Y"), value]}
+  end
 end

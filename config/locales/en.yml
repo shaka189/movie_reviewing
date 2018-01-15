@@ -118,6 +118,7 @@ en:
         status: "Status"
         avg_rate: "Audience Rate"
         submit: "Submit"
+        pie_chart_films: "Pie Chart group by categori"
       film:
         edit_film: "Edit Film"
         delete: "Delete"
@@ -155,6 +156,7 @@ en:
       approve: "Approve"
       unapprove: "Unapprove"
       back_to_post: "Back"
+      pie_chart_post_reviews: "Pie chart posts review group by approve"
     admin:
       film: "Films"
       user: "Users"
@@ -169,6 +171,7 @@ en:
         address: "Address"
         uid: "Uid Facebook"
         user_list: "User List"
+        line_chart_users: "Line chart users group by create time"
       user:
         delete: "Delete"
         you_sure: "Are you sure?"
@@ -178,6 +181,16 @@ en:
         name: "User commented"
         post_review: "Post Review"
         content: "Content"
+    bookings:
+      index:
+        booking_list: "Booking List"
+        name: "User Name"
+        film: "Film Booking"
+        watching_day: "Watching Day"
+        watching_time: "Watching Time"
+        quantity: "Quantity"
+        price: "Price"
+        pie_chart_bookings: "Pie chart booking group by Watching Time"
 
   sessions:
     new:

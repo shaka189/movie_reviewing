@@ -1,9 +1,10 @@
 <div class="row">
+  <%= pie_chart chart_film, title: t(".pie_chart_films") %>
   <h2 class="sub-header"><%= t ".film_list" %></h2>
   <%= link_to t(".create_new_film"), new_admin_film_path, class: "btn btn-info"%>
   <br/><br/>
   <%= link_to admin_films_path(format: "xls") do %>
-  <i class="fa fa-file-excel-o" aria-hidden="true"></i>&nbsp
+    <i class="fa fa-file-excel-o" aria-hidden="true"></i>&nbsp
     <%= t "export.export_excel" %>
   <% end %>
   <div class="table-responsive">

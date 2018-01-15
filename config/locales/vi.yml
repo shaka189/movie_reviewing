@@ -118,6 +118,7 @@ vi:
         status: "Trạng thái"
         avg_rate: "Điểm người dùng"
         submit: "Gửi"
+        pie_chart_films: "Biểu đồ tròn của phim chia theo thể loại"
       film:
         edit_film: "Chỉnh sửa phim"
         delete: "Xóa bỏ"
@@ -155,6 +156,7 @@ vi:
       approve: "Phê duyệt"
       unapprove: "Hủy phê duyệt"
       back_to_post: "Quay trở lại"
+      pie_chart_post_reviews: "Biểu đồ tròn chia theo tỷ lệ phê duyệt"
     admin:
       film: "Phim"
       user: "Người dùng"
@@ -170,6 +172,7 @@ vi:
         address: "Địa chỉ"
         uid: "ID người dùng Facebook"
         user_list: "Danh sách người dùng"
+        line_chart_users: "Biểu đồ người dùng theo thời gian đăng ký"
       user:
         delete: "Xóa bỏ"
         you_sure: "Bạn chắc muốn xóa không?"
@@ -179,6 +182,16 @@ vi:
         name: "Người dùng bình luận"
         post_review: "Bài viết bình luận"
         content: "Nội dung bình luận"
+    bookings:
+      index:
+        booking_list: "Danh sách đặt vé"
+        name: "Tên người dùng"
+        film: "Phim được đặt vé"
+        watching_day: "Ngày đặt vé"
+        watching_time: "Giờ chiếu"
+        quantity: "Số lượng"
+        price: "Giá vé"
+        pie_chart_bookings: "Biểu đồ tròn chia theo thời gian chiếu"
 
   sessions:
     new:
