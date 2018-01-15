@@ -45,6 +45,7 @@ vi:
     check_email: "Kiểm tra email để kích hoạt tài khoản"
     invalid: "Email hoặc mật khẩu của bạn không đúng"
     wrong_quantity: "Số lượng đặt không được lớn hơn số vé còn lại"
+    quantity_nil: "Làm ơn chọn số lượng vé bạn muốn đặt"
     booking_success: "Đặt vé thành công!"
     booking_fail: "Đặt vé thất bại!"
     destroy_booking_success: "Hủy đặt vé thành công"
@@ -58,6 +59,7 @@ vi:
     destroy_rate_succeed: "Xóa đánh giá thành công"
     destroy_rate_failed: "Xóa đánh giá thất bại"
     login_face_failed: "Đăng nhập Facebook thất bại"
+    destroy_comment_success: "Xóa bình luận thành công"
     destroy_comment_failed: "Không xóa được bình luận"
     create_comment_failed: "Không tạo được bình luận"
 
@@ -155,6 +157,28 @@ vi:
       back_to_post: "Quay trở lại"
     admin:
       film: "Phim"
+      user: "Người dùng"
+      film: "Phim"
+      booking: "Đặt vé"
+      comment: "Bình luận"
+    users:
+      index:
+        name: "Tên người dùng"
+        email: "Email"
+        dob: "Ngày tháng năm sinh"
+        admin: "Quản trị viên"
+        address: "Địa chỉ"
+        uid: "ID người dùng Facebook"
+        user_list: "Danh sách người dùng"
+      user:
+        delete: "Xóa bỏ"
+        you_sure: "Bạn chắc muốn xóa không?"
+    comments:
+      index:
+        comment_list: "Danh sách bình luận"
+        name: "Người dùng bình luận"
+        post_review: "Bài viết bình luận"
+        content: "Nội dung bình luận"
 
   sessions:
     new:

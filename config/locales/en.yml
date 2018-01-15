@@ -45,6 +45,7 @@ en:
     check_email: "Check your email for the activation link."
     invalid: "Invalid email/password combination"
     wrong_quantity: "Quantity can't greater than remaining ticket"
+    quantity_nil: "Please choose quantity you want booking"
     booking_success: "Booking Succeeded!"
     booking_fail: "Booking Failed!"
     destroy_booking_success: "Succeeded cancellation  booking"
@@ -58,6 +59,7 @@ en:
     destroy_rate_succeed: "Delete rate succeed"
     destroy_rate_failed: "Delete rate failed"
     login_face_failed: "Login via Facebook failed"
+    destroy_comment_success: "Delete comment succeed"
     destroy_comment_failed: "Delete comment failed"
     create_comment_failed: "Create comment failed"
 
@@ -154,7 +156,28 @@ en:
       unapprove: "Unapprove"
       back_to_post: "Back"
     admin:
-      film: "Film"
+      film: "Films"
+      user: "Users"
+      booking: "Bookings"
+      comment: "Comments"
+    users:
+      index:
+        name: "User Name"
+        email: "Email"
+        dob: "Day of Birth"
+        admin: "Admin"
+        address: "Address"
+        uid: "Uid Facebook"
+        user_list: "User List"
+      user:
+        delete: "Delete"
+        you_sure: "Are you sure?"
+    comments:
+      index:
+        comment_list: "Comment List"
+        name: "User commented"
+        post_review: "Post Review"
+        content: "Content"
 
   sessions:
     new:

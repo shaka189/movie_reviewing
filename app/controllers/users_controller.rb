@@ -1,13 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:show, :create, :new]
   before_action :correct_user, only: [:edit, :update]
-  before_action :verify_admin, only: :destroy
   before_action :load_user, except: [:index, :new, :create]
-
-  def index
-    @users = User.paginate page: params[:page],
-      per_page: Settings.paginate_number.per_page
-  end
 
   def show
     @posts = @user.post_reviews.paginate page: params[:page],
@@ -65,11 +59,5 @@ class UsersController < ApplicationController
   def correct_user
     @user = User.find params[:id]
     redirect_to root_url unless current_user? @user
-  end
-
-  def verify_admin
-    redirect_to root_url unless current_user.admin?
-    flash[:danger] = t "flash.load_user_fail" + params[:id]
-    redirect_to root_path
   end
 end

@@ -1,11 +1,11 @@
   <h1 class="page-header"><%= t "layouts.admin_header.dashboard" %></h1>
   <div class="col-sm-3 col-md-2 sidebar">
     <ul class="nav nav-sidebar">
-      <li><%= link_to t("admin.admin.user"), "#" %></li>
+      <li><%= link_to t("admin.admin.user"), admin_users_path %></li>
       <li><%= link_to t("admin.post.post_review"), admin_post_reviews_path %></li>
       <li><%= link_to t("admin.admin.film"), admin_films_path %></li>
-      <li><%= link_to t("admin.admin.booking"), "#" %></li>
-      <li><%= link_to t("admin.admin.comment"), "#" %></li>
+      <li><%= link_to t("admin.admin.booking"), admin_bookings_path %></li>
+      <li><%= link_to t("admin.admin.comment"), admin_comments_path %></li>
     </ul>
   </div>
   <div class="col-sm-9 col-md-10">

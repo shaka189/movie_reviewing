@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20180102235636) do
   create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "user_id"
     t.bigint "watching_time_id"
-    t.integer "quantity"
+    t.integer "quantity", default: 0
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -100,7 +100,6 @@ ActiveRecord::Schema.define(version: 20180102235636) do
     t.datetime "updated_at", null: false
     t.string "reset_digest"
     t.datetime "reset_sent_at"
-    t.date "birthday"
     t.string "address"
     t.string "remember_digest"
     t.string "password_digest"

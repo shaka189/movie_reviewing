@@ -15,7 +15,11 @@
               <br />
               <i class="glyphicon glyphicon-gift"></i><%= @user.dob %>
             </p>
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal-<%= @user.id %>"><%= t ".edit" %></button>
+            <% if current_user? @user %>
+            <button type="button" class="btn btn-info"
+              data-toggle="modal" data-target="#myModal-<%= @user.id %>">
+              <%= t ".edit" %></button>
+            <% end %>
             <div class="modal fade" id="myModal-<%= @user.id %>" role="dialog">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">

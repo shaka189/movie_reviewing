@@ -1,4 +1,5 @@
 class PostReviewsController < ApplicationController
+  before_action :authenticate_user!, except: :show
   before_action :load_post, except: [:index, :new, :create]
 
   def show
