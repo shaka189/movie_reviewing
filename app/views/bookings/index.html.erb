@@ -14,7 +14,7 @@
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <a data-toggle="collapse" data-parent="#accordion"
-                    href="#collapse<%= watching_day.id%>"><%= watching_day.day_watching %></a>
+                    href="#collapse<%= watching_day.id%>"><%= watching_day.day_watching.strftime("%d-%m-%Y") %></a>
                 </h4>
               </div>
               <div id="collapse<%= watching_day.id%>" class="panel-collapse collapse">
@@ -39,7 +39,7 @@
                               </div>
                               <div class="col-md-8">
                                 <b><%= t ".day_watching" %>&nbsp:</b>
-                                <%= watching_time.watching_day.day_watching %></br>
+                                <%= watching_time.watching_day.day_watching.strftime("%d-%m-%Y") %></br>
                                 <b><%= t ".time" %>&nbsp:</b>
                                 <%= watching_time.time.to_formatted_s :time %></br>
                                 <b><%= t ".remaining_ticket" %>&nbsp:</b>

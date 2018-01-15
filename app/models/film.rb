@@ -19,6 +19,10 @@ class Film < ApplicationRecord
     select("id, name, play_time, imdb_rate, status, avg_rate")
   end
 
+  def self.select_film
+    select("id, name, play_time, imdb_rate, status, avg_rate")
+  end
+
   def reject_categories(attributes)
     attributes["content"].blank?
   end

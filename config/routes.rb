@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   resources :sessions, only: [:create, :destroy]
   resources :password_resets, only: [:new, :create, :edit, :update]
-  resources :users
+  resources :users, except: [:index]
   resources :post_reviews, except: [:index] do
     resources :comments
   end
@@ -26,6 +26,9 @@ Rails.application.routes.draw do
   namespace :admin do
     root "admin#index"
     resources :films
-    resources :post_reviews
+    resources :post_reviews, except: [:show]
+    resources :users, only: [:index, :destroy]
+    resources :bookings, only: [:index, :destroy]
+    resources :comments, only: [:index, :destroy]
   end
 end

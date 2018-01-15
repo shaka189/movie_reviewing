@@ -1,0 +1,21 @@
+<div class="row">
+  <h2 class="sub-header"><%= t ".user_list" %></h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t ".name" %></th>
+          <th><%= t ".film" %></th>
+          <th><%= t ".watching_day" %></th>
+          <th><%= t ".watching_time" %></th>
+          <th><%= t ".quantity" %></th>
+          <th><%= t ".price" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "booking", collection: @bookings %>
+      </tbody>
+    </table>
+    <%= will_paginate @bookings %>
+  </div>
+</div>

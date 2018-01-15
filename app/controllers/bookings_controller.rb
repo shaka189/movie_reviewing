@@ -9,17 +9,22 @@ class BookingsController < ApplicationController
     @booking = Booking.new booking_params
     @booking.user_id = current_user.id
     @watching_time = @booking.watching_time
-    if @watching_time.remaining_ticket >= @booking.quantity
-      if @booking.save
-        @booking.sub_remaining_ticket @watching_time
-        flash[:success] = t "flash.booking_success"
-        redirect_to bookings_path
+    if @booking.quantity
+      if @watching_time.remaining_ticket >= @booking.quantity
+        if @booking.save
+          @booking.sub_remaining_ticket @watching_time
+          flash[:success] = t "flash.booking_success"
+          redirect_to bookings_path
+        else
+          flash[:danger] = t "flash.booking_fail"
+          redirect_to bookings_path
+        end
       else
-        flash[:danger] = t "flash.booking_fail"
+        flash[:danger] = t "flash.wrong_quantity"
         redirect_to bookings_path
       end
     else
-      flash[:danger] = t "flash.wrong_quantity"
+      flash[:danger] = t "flash.quantity_nil"
       redirect_to bookings_path
     end
   end
