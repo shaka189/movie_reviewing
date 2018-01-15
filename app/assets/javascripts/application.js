@@ -14,6 +14,8 @@
 //= require rails-ujs
 //= require ckeditor/init
 //= require bootstrap-sprockets
+//= require highcharts
+//= require chartkick
 //= require_tree .
 
 $(function() {
