@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "pages/help"
   get "/signup",  to: "users#new"
   get "/login",   to: "sessions#new"
-  get "/search", to: "searchs#index"
+  get :search, controller: :searchs
   post "/login",   to: "sessions#create"
   delete "/logout",  to: "sessions#destroy"
 
