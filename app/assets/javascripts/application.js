@@ -16,6 +16,7 @@
 //= require bootstrap-sprockets
 //= require highcharts
 //= require chartkick
+//= require jquery.easy-autocomplete
 //= require_tree .
 
 $(function() {
