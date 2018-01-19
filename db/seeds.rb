@@ -160,3 +160,10 @@ end
   Rating.create!(film_id: 1, user_id: "#{m}", mark: "8", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
   Rating.create!(film_id: 2, user_id: "#{m}", mark: "8", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
 end
+
+
+
+
+PostReview.create!(user_id: 1, title: "Thor3", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", image: open("https://resizing.flixster.com/eQ8z-h3mtqUCASBMi7empUwNFdU=/206x305/v1.bTsxMjU0NjIzNDtqOzE3NTYwOzEyMDA7MTY4ODsyNTAw") )
+
+PostReview.create!(user_id: 2, title: "Avg4", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", image: open("https://resizing.flixster.com/eQ8z-h3mtqUCASBMi7empUwNFdU=/206x305/v1.bTsxMjU0NjIzNDtqOzE3NTYwOzEyMDA7MTY4ODsyNTAw"), approve: true )
