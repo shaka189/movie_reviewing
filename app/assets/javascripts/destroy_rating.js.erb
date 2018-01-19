@@ -1,16 +1,20 @@
 $(function(){
   delete_review = function(link){
     var rating_id = link.id;
+    var film_id = $('#rating_film_id').val();
+    params = {"rating": {"film_id": film_id}}
     var confirm_del = confirm('<%= I18n.t("admin.films.film.you_sure") %>');
     if (confirm_del == true) {
       $.ajax({
         method: 'DELETE',
-        url: '/ratings/' + rating_id
+        url: '/ratings/' + rating_id,
+        data: params,
+        type: 'JSON'
       }).success(function(data){
         if (data.status == "success"){
           alert('<%= I18n.t("flash.destroy_rate_succeed") %>');
-          $('#review-'+ rating_id).hide();
-          $('#new_rating').show();
+          $('.review_rating_section').html(data.content);
+          $('.avg_rate_change').text(data.avg_rate.toFixed(1))
         } else {
           alert('<%= I18n.t("flash.destroy_rate_failed") %>');
         }

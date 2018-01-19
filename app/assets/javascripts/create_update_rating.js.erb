@@ -19,10 +19,6 @@ $(function() {
   SetRatingStar();
 
   var $rating_mark_start = $('#rating_mark').val();
-  var change_html = function(data){
-      $('.review-section-body').prepend(data.content);
-      $('.avg_rate_change').text(data.avg_rate.toFixed(1));
-  }
 
   $('.submit-rating').on('click',function(event){
     var $current_user_exit = $('#rating_current_user').val();
@@ -47,10 +43,10 @@ $(function() {
       }).success(function(data){
         alert(data.message);
         if (data.status == "success") {
-          $('#new_rating').hide();
-          $('#review-'+ data.data.id).hide();
-          $('#rating_rating_id').val(data.data.id);
-          change_html(data);
+          $('.review_rating_section').html(data.content);
+          $('.avg_rate_change').text(data.avg_rate.toFixed(1))
+          $('#rating_rating_id').val(data.rating_id);
+
         }
       }).error(function(){
         alert('<%= I18n.t("flash.update_rate_failed") %>');

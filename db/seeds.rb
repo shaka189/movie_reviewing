@@ -158,7 +158,7 @@ end
 15.times do |n|
   m = n+2
   Rating.create!(film_id: 1, user_id: "#{m}", mark: "8", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-  Rating.create!(film_id: 2, user_id: "#{m}", mark: "8", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+  # Rating.create!(film_id: 2, user_id: "#{m}", mark: "8", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
 end
 
 10.times do |n|

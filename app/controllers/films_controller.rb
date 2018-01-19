@@ -4,11 +4,10 @@ class FilmsController < ApplicationController
   def show
     @ratings = @film.ratings.desc_create_time.paginate page: params[:page],
       per_page: Settings.paginate_number.per_page
+    @rating = @film.ratings.build
     if current_user
       @rating = @film.ratings.find_by user_id: current_user.id
       return if @rating
-      @rating = @film.ratings.build
-    else
       @rating = @film.ratings.build
     end
   end
