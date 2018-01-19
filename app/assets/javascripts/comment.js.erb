@@ -11,7 +11,7 @@ $(function(){
       data: params
     }).success(function(data){
       if (data.status == "success") {
-        $('.header-comment').prepend(data.content);
+        $('.header-comment').html(data.content);
         $('#comment_content').val('');
       } else {
         alert('<%= I18n.t("flash.create_comment_failed") %>');

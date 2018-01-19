@@ -17,14 +17,13 @@
         </tr>
         <br/>
       </div>
-      <div class="col-md-12">
-        <br/>
-        <%= render "comment/form" %>
-        <br/>
-      </div>
-      <div class="row well header-comment">
-        <%= render partial: 'comment/comment', collection: @comments %>
-        <%= will_paginate @comments %>
+      <div class="row fix-style-comments-section">
+        <div class="row well">
+          <%= render "comment/form" %>
+        </div>
+        <div class ="header-comment">
+          <%= render partial: 'comment/comment', locals:{comments: @comments} %>
+        </div>
       </div>
     </div>
   </div>

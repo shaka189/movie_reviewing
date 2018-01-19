@@ -3,18 +3,20 @@ $(function(){
     var comment_id = comment.id;
     var post_id = $('#comment_post_review_id').val();
     var confirm_del = confirm('<%= I18n.t("post_reviews.comment.confirm") %>');
+    params = {"comments": {"post_review_id": post_id}}
     if (confirm_del == true) {
       $.ajax({
         method: 'DELETE',
-        url: '/post_reviews/' + post_id  + '/comments/' + comment_id
+        url: '/post_reviews/' + post_id  + '/comments/' + comment_id,
+        data: params
       }).success(function(data){
         if (data.status == "success"){
-          $('#comment-' + comment_id).hide();
+          $('.header-comment').html(data.content);
         } else {
-          alert('a');
+          alert('<%= I18n.t("post_reviews.comment.destroy_failed');
         }
       }).error(function(){
-        alert('b');
+        alert('<%= I18n.t("post_reviews.comment.destroy_failed');
       });
     }
   }

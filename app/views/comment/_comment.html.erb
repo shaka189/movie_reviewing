@@ -1,27 +1,33 @@
-<div class="col-md-12" id ="comment-<%= comment.id %>">
+<% comments.each do |comment| %>
+<div class="review-section well" id ="comment-<%= comment.id %>">
   <div class= "row">
-    <div class="col-md-3">
-      <div class= "user-review">
+    <div class="col-md-4 user-review">
+      <div class = "bold">
         <%= avatar_for comment.user %>
-        <div class = "bold">
-          <%= (comment.user.name) %>
-        </div>
-      </div>
+        <h4><%= (comment.user.name) %></h4>
+      </div><br/>
+      <i><%= comment.updated_at.strftime("%d-%m-%Y") %>&nbsp</i>
+      <i><%= time_ago_in_words(comment.updated_at)%> <%= t "post_reviews.comment.ago" %></i>
     </div>
     <div class="col-md-8">
       <div class = comment-content>
         <%= comment.content %>
       </div>
-      <i><%= comment.updated_at.strftime("%d-%m-%Y") %>&nbsp</i>
-      <i><%= time_ago_in_words(comment.updated_at)%> <%= t "post_reviews.comment.ago" %></i>
+
     </div>
     <% if current_user %>
       <% if current_user?(comment.user) || current_user.admin? %>
-        <span class= "delete_comment" onclick="delete_comment(this)"
+        <span class= "delete_review" onclick="delete_comment(this)"
           id ="<%= comment.id %>"><i class="fa fa-times" aria-hidden="true">
           </i></span>
       <% end %>
     <% end %>
   </div>
-  <br/>
 </div>
+<% end %>
+<% if !(params[:comments]&& params[:comments][:post_review_id]).nil? %>
+  <%= will_paginate comments, params: {controller: :post_reviews, id: params[:comments][:post_review_id],
+    action: :show} %>
+<% else %>
+  <%= will_paginate comments %>
+<% end %>
