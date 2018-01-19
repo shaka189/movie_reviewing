@@ -5,6 +5,7 @@ class PostReviewsController < ApplicationController
   def show
     @comments = @post.comments.desc_create_at.paginate page: params[:page],
       per_page: Settings.paginate_number.per_page
+    @like = @post.likes.find_by user_id: current_user.id
     if current_user != @post.user && !current_user.admin?
       return if @post.approve?
       flash[:danger] = t "flash.permission_access"

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :users, except: [:index]
   resources :post_reviews, except: [:index] do
     resources :comments
+    resources :likes, only: [:create, :destroy]
   end
   resources :bookings, only: [:index, :create, :destroy]
   resources :films, only: [:show]

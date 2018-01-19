@@ -1,6 +1,7 @@
 class PostReview < ApplicationRecord
   belongs_to :user
   has_many :comments
+  has_many :likes, dependent: :destroy
   mount_uploader :image, PictureUploader
   validates :title,  presence: true, length: {maximum: Settings.user.name_maximum}
   scope :pending, -> {where(:approve => true)}

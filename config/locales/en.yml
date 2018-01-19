@@ -62,6 +62,8 @@ en:
     destroy_comment_success: "Delete comment succeed"
     destroy_comment_failed: "Delete comment failed"
     create_comment_failed: "Create comment failed"
+    create_like_failed: "Can't like this Post"
+    destroy_like_failed: "Can't unlike this Post"
 
   export:
     export_excel: "Export Excel"
@@ -119,6 +121,7 @@ en:
         avg_rate: "Audience Rate"
         submit: "Submit"
         pie_chart_films: "Pie Chart group by categori"
+        describe: "Describe"
       film:
         edit_film: "Edit Film"
         delete: "Delete"
@@ -273,6 +276,8 @@ en:
       ago: "ago"
       comment: "Comment"
       submit: "Post"
+    like: "Like"
+    unlike: "Unlike"
 
   shared:
     post:
