@@ -1,0 +1,6 @@
+<tr id= "request_<%= request.id %>">
+  <td><%= request.title %></td>
+  <td><%= raw request.content %></td>
+  <td><%= request.created_at %></td>
+  <td><%= link_to t("shared.request.delete"), admin_request_path(request), method: :delete %></td>
+</tr>

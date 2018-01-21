@@ -32,5 +32,6 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :destroy]
     resources :bookings, only: [:index, :destroy]
     resources :comments, only: [:index, :destroy]
+    resources :requests, only: [:index, :destroy]
   end
 end

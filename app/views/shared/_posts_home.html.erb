@@ -1,0 +1,17 @@
+<div class="container">
+  <h2><%= t ".booking_online" %></h2>
+  <div class="row">
+    <% @posts.each do |film| %>
+    <li class="col-sm-3">
+
+      <div class="container carousel-inner">
+        <div class="col-md-3">
+          <h3><%= film.title %></h3>
+          <%= image_tag film.image %>
+          <p><%= film.content %></p>
+        </div>
+      </div>
+      </li>
+    <% end %>
+  </div>
+</div>

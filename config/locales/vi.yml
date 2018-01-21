@@ -112,6 +112,9 @@ vi:
   pages:
     home:
       top_movie: "Top 10 phim ăn khách trong tuần"
+      hot_post: "Các bài post được yêu thích"
+    slider:
+      new_post: "Bài đánh giá mới"
 
   admin:
     films:
@@ -172,11 +175,13 @@ vi:
       user: "Người dùng"
       booking: "Đặt vé"
       comment: "Bình luận"
+      request: "Yêu cầu"
       index:
         new_users: "Người dùng mới"
         new_post_reviews: "Bài viết mới"
         new_bookings: "Đặt vé mới"
         new_comments: "Bình luận mới"
+        new_requests: "Yêu cầu mới"
 
     users:
       index:
@@ -305,6 +310,8 @@ vi:
     booking:
       cancellation: "Hủy bỏ"
       you_sure: "Bạn có chắc muốn hủy vé không?"
+    request:
+      delete: "Xóa"
 
   bookings:
     index:
@@ -333,3 +340,8 @@ vi:
       ago: "trước"
 
   search: "Tìm kiếm"
+
+  requests:
+    title: "Tiêu đề"
+    content: "Nội dung"
+    create_time: "Thời gian tạo"

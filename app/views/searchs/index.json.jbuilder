@@ -6,4 +6,3 @@ json.array!(@films) do |film|
   json.name film.name
   json.url film_path(film)
 end
-

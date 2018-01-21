@@ -4,7 +4,6 @@
     post_review_path(comment.post_review) %></td>
   <td><%= comment.content %></td>
   <td>
-    <%= link_to t(".delete"), admin_comment_path(comment), method: :delete,
-      data: {confirm: t(".you_sure")} %>
+    <%= link_to t(".delete"), admin_comment_path(comment), method: :delete %>
   </td>
 </tr>

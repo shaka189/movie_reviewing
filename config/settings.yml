@@ -10,3 +10,5 @@ user:
   expire_hours: 2
 rating:
   review_maximum: 450
+post:
+  describe_maximum: 50
