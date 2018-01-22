@@ -1,6 +1,7 @@
 class Admin::UsersController < Admin::BaseController
   def index
-    @users = User.desc_create_time.paginate page: params[:page],
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true).desc_create_time.paginate page: params[:page],
       per_page: Settings.paginate_number.per_page
   end
 

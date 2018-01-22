@@ -193,6 +193,8 @@ en:
         uid: "Uid Facebook"
         user_list: "User List"
         line_chart_users: "Line chart users group by create time"
+        search_user: "Search User"
+        search_email: "Search Email"
       user:
         delete: "Delete"
         you_sure: "Are you sure?"
