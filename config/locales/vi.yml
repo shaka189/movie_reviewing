@@ -68,6 +68,19 @@ vi:
     create_request_fail: "Tạo yêu cầu thất bại"
     destroy_request_success: "Xóa yêu cầu thành công"
     destroy_request_fail: "Xóa yêu cầu thất bại"
+    cant_be_past: "Không thể trước ngày hôm nay"
+  
+  categories:
+    action: "Hành Động"
+    adventure: "Thám hiểm"
+    crime: "Tội Phạm"
+    drama: "Dài tập"
+    history: "Lịch sử"
+    horror: "Kinh dị"
+    musical: "Ca nhạc"
+    fiction: "Viễn tưởng"
+    war: "Chiến tranh"
+    westerns: "Miền tây"
 
   export:
     export_excel: "Kết xuất bảng excel"

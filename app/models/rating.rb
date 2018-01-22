@@ -1,5 +1,6 @@
 class Rating < ApplicationRecord
   after_save :audience_score
+  after_destroy :audience_score
   belongs_to :user
   belongs_to :film
   validates :mark, presence: true

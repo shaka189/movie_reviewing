@@ -1,7 +1,8 @@
 <fieldset>
   <div class="row">
     <div class="col-md-8">
-      <%= f.text_field :content, class: "form-control" %>
+      <%= f.collection_select :category_id, Category.all, :id, :name_with_initial, {},
+        {class: "form-control"} %>
     </div>
     <div class="col-md-4">
       <%= f.hidden_field :_destroy %>

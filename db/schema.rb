@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180119074339) do
+ActiveRecord::Schema.define(version: 20180122131602) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
@@ -25,10 +25,8 @@ ActiveRecord::Schema.define(version: 20180119074339) do
 
   create_table "categories", force: :cascade do |t|
     t.string "content"
-    t.integer "film_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["film_id"], name: "index_categories_on_film_id"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -51,6 +49,16 @@ ActiveRecord::Schema.define(version: 20180119074339) do
     t.datetime "updated_at", null: false
     t.index ["post_review_id"], name: "index_comments_on_post_review_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "film_categories", force: :cascade do |t|
+    t.integer "film_id"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_film_categories_on_category_id"
+    t.index ["film_id", "category_id"], name: "index_film_categories_on_film_id_and_category_id", unique: true
+    t.index ["film_id"], name: "index_film_categories_on_film_id"
   end
 
   create_table "films", force: :cascade do |t|

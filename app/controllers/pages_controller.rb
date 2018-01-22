@@ -5,10 +5,4 @@ class PagesController < ApplicationController
     @hot_posts = PostReview.find Like.hot_posts.map(&:post_review_id)
     @films = Film.desc_create_time.limit(3).to_a
   end
-
-  def about
-  end
-
-  def help
-  end
 end
