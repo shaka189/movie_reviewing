@@ -292,6 +292,7 @@ en:
       ago: "ago"
       comment: "Comment"
       submit: "Post"
+      destroy_failed: "Delete comment failed"
     like: "Like"
     unlike: "Unlike"
 

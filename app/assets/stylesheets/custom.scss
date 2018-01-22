@@ -76,8 +76,10 @@ p {
   text-decoration: none;
 }
 .fix-form-position {
-  margin: 0 0 0 300px;
+  width: 300px !important;
+  display: inline-flex !important;
 }
+
 #user_profile {
   width: 200px;
   color: $white;
@@ -478,4 +480,8 @@ iframe {
   .all_host_post{
     margin-top: 70px;
   }
+}
+.fix-style-comments-section{
+  border: 2px solid $gray-medium-light;
+  padding: 0 10px;
 }

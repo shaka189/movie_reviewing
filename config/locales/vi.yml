@@ -292,6 +292,7 @@ vi:
       ago: "trước"
       comment: "Bình luận"
       submit: "Đăng"
+      destroy_failed: "Xóa comment thất bại"
     like: "Thích"
     unlike: "Bỏ Thích"
 
