@@ -52,8 +52,9 @@
         <span class="review-section-header"><%= t(".review_section")%>
         </span>
         <div class="col-md-12 review-section-body">
-          <%= render partial: "films/rating", collection: @ratings %>
-          <%= will_paginate @ratings %>
+          <div class="review_rating_section">
+            <%= render partial: "films/rating", locals:{ratings: @ratings} %>
+          </div>
         </div>
       </div>
     </div>

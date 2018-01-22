@@ -55,7 +55,7 @@ vi:
     create_rate_succeed: "Đánh giá thành công"
     create_rate_failed: "Đánh giá thất bại"
     update_rate_succeed: "Cập nhật đánh giá thành công"
-    update_rate_failed: "Cập nhật đánh giá thất bại"
+    update_rate_failed: "Bạn chỉ được đánh giá 1 lần duy nhất"
     destroy_rate_succeed: "Xóa đánh giá thành công"
     destroy_rate_failed: "Xóa đánh giá thất bại"
     login_face_failed: "Đăng nhập Facebook thất bại"

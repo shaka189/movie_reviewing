@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   get :index, controller: :searchs
   post "/login",   to: "sessions#create"
   delete "/logout",  to: "sessions#destroy"
-
   resources :account_activations, only: [:edit]
   resources :sessions, only: [:create, :destroy]
   resources :password_resets, only: [:new, :create, :edit, :update]

@@ -55,7 +55,7 @@ en:
     create_rate_succeed: "Rating succeed"
     create_rate_failed: "Rating failed"
     update_rate_succeed: "Update rate succeed"
-    update_rate_failed: "Update rate failed"
+    update_rate_failed: "You have only one time ratings!"
     destroy_rate_succeed: "Delete rate succeed"
     destroy_rate_failed: "Delete rate failed"
     login_face_failed: "Login via Facebook failed"
