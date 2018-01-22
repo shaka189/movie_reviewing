@@ -161,11 +161,10 @@ end
   # Rating.create!(film_id: 2, user_id: "#{m}", mark: "8", review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
 end
 
-10.times do |n|
+15.times do |n|
   m = n+2
   p = n+3
   PostReview.create!(user_id: "#{n+1}", title: "Thor #{m}", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", image: open("https://resizing.flixster.com/eQ8z-h3mtqUCASBMi7empUwNFdU=/206x305/v1.bTsxMjU0NjIzNDtqOzE3NTYwOzEyMDA7MTY4ODsyNTAw") , approve: true)
-  PostReview.create!(user_id: "#{m}", title: "Avg #{p}", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", image: open("https://resizing.flixster.com/eQ8z-h3mtqUCASBMi7empUwNFdU=/206x305/v1.bTsxMjU0NjIzNDtqOzE3NTYwOzEyMDA7MTY4ODsyNTAw") , approve: false)
   PostReview.create!(user_id: "#{p}", title: "The Post #{n}", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", image: open("https://resizing.flixster.com/eQ8z-h3mtqUCASBMi7empUwNFdU=/206x305/v1.bTsxMjU0NjIzNDtqOzE3NTYwOzEyMDA7MTY4ODsyNTAw") , approve: true)
 end
 
@@ -195,4 +194,10 @@ end
   Comment.create!(user_id: "#{n+8}", post_review_id: "#{n+3}", content: "Lorem ipsum dolor sit amet")
   Comment.create!(user_id: "#{n+9}", post_review_id: "#{n+2}", content: "Lorem ipsum dolor sit amet")
   Comment.create!(user_id: "#{n+10}", post_review_id: "#{n+1}", content: "Lorem ipsum dolor sit amet")
+end
+
+15.times do |n|
+  m = n+2
+  p = n+3
+ PostReview.create!(user_id: "#{m}", title: "Avg #{p}", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", image: open("https://resizing.flixster.com/eQ8z-h3mtqUCASBMi7empUwNFdU=/206x305/v1.bTsxMjU0NjIzNDtqOzE3NTYwOzEyMDA7MTY4ODsyNTAw") , approve: false)
 end

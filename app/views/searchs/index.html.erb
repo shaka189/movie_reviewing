@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-    <h1>Films</h1>
+    <h1><%= t "users.search.film" %></h1>
     <% @films.each do |film| %>
     <div class="row set-border">
         <div class="col-md-4 col-remove-padding-left">
@@ -13,7 +13,7 @@
     <% end %>
   </div>
   <div class="col">
-    <h1>Posts</h1>
+    <h1><%= t "users.search.post" %></h1>
     <% @posts.each do |post| %>
       <div class="row set-border">
         <div class="col-md-4 col-remove-padding-left">
