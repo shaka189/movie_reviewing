@@ -271,6 +271,9 @@ vi:
       fill_title: "...Nhập nội dung..."
       content: "Nội dung (Tối đa 100 kí tự)"
       submit: "Gửi"
+    search:
+      film: "Phim"
+      post: "Bài đánh giá"
 
   post_reviews:
     new:

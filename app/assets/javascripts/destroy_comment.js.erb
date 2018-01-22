@@ -13,10 +13,10 @@ $(function(){
         if (data.status == "success"){
           $('.header-comment').html(data.content);
         } else {
-          alert('<%= I18n.t("post_reviews.comment.destroy_failed');
+          alert('<%= I18n.t("flash.destroy_comment_failed") %>');
         }
       }).error(function(){
-        alert('<%= I18n.t("post_reviews.comment.destroy_failed');
+        alert('<%= I18n.t("flash.destroy_comment_failed") %>');
       });
     }
   }
