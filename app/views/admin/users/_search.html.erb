@@ -1,0 +1,13 @@
+<%= search_form_for [:admin, @q], class: "form-inline" do |f| %>
+  <div class="navbar-header">
+    <%= f.label :user_name, t("admin.users.index.name") %>
+    <%= f.search_field :name_cont, class: "form-control", placeholder: t("admin.users.index.search_user") %>
+  </div>
+  <div class="navbar-header">
+    <%= f.label :email, t("admin.users.index.email") %>
+    <%= f.search_field :email_cont, class: "form-control", placeholder: t("admin.users.index.search_email") %>
+  </div>
+  <div class="navbar-header">
+    <%= f.submit t("search"), class: "btn btn-primary button-width" %>
+  </div>
+<% end %>

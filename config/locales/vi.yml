@@ -193,6 +193,8 @@ vi:
         uid: "ID người dùng Facebook"
         user_list: "Danh sách người dùng"
         line_chart_users: "Biểu đồ người dùng theo thời gian đăng ký"
+        search_user: "Tìm theo người dùng"
+        search_email: "Tìm theo email"
       user:
         delete: "Xóa bỏ"
         you_sure: "Bạn chắc muốn xóa không?"

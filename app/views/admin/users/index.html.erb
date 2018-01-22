@@ -1,6 +1,9 @@
 <div class="row">
   <%= line_chart chart_user, title: t(".line_chart_users") %>
-  <h2 class="sub-header"><%= t ".user_list" %></h2>
+  <h2 class="sub-header"><%= t ".user_list" %></h2><br/>
+  <div class="container">
+    <%= render "admin/users/search" %>
+  </div><br/>
   <div class="table-responsive">
     <table class="table table-striped">
       <thead>
