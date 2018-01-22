@@ -1,0 +1,16 @@
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= t "requests.title" %></th>
+        <th><%= t "requests.content" %></th>
+        <th><%= t "requests.create_time" %></th>
+      </tr>
+    </thead>
+    <h1><%= t "admin.admin.request" %></h1>
+    <tbody>
+      <%= render partial: "request", collection: @requests %>
+    </tbody>
+  </table>
+  <%= will_paginate @requests %>
+</div>

@@ -5,10 +5,8 @@
         <tr>
           <td><h1><%= raw @post.title %></h1></td>
           <div class = "button-like" id= "<%= @like.present? ? @like.id : 0 %>">
-            <% if logged_in? %>
-              <%= render "likes/like" %>
-              <%= render "likes/unlike" %>
-            <% end %>
+            <%= render "likes/like" %>
+            <%= render "likes/unlike" %>
           </div>
           <br/>
           <%= render "shared/share_facebook_button" %>
@@ -19,11 +17,6 @@
         </tr>
         <br/>
       </div>
-      <% if current_user.admin? %>
-        <%= link_to t("admin.post.back_to_post"), admin_post_reviews_path %>
-      <% else %>
-        <%= link_to t("post_reviews.form.back_to_profile"), current_user %>
-      <%end%>
       <div class="col-md-12">
         <br/>
         <%= render "comment/form" %>

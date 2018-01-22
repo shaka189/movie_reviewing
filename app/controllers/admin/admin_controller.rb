@@ -8,5 +8,7 @@ class Admin::AdminController < Admin::BaseController
       per_page: Settings.paginate_number.per_page
     @new_comments = Comment.new_comments.desc_create_at.paginate page: params[:page],
       per_page: Settings.paginate_number.per_page
+    @new_requests = Request.new_requests.desc_create_at.paginate page: params[:page],
+      per_page: Settings.paginate_number.per_page
   end
 end

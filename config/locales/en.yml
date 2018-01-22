@@ -112,6 +112,9 @@ en:
   pages:
     home:
       top_movie: "Top 10 movie in week"
+      hot_post: "Hot Post"
+    slider:
+      new_post: "New PostReview"
 
   admin:
     films:
@@ -172,11 +175,13 @@ en:
       user: "Users"
       booking: "Bookings"
       comment: "Comments"
+      request: "Requests"
       index:
         new_users: "New Users"
         new_post_reviews: "New Posts Review"
         new_bookings: "New Bookings"
         new_comments: "New Comments"
+        new_request: "New Requests"
 
     users:
       index:
@@ -305,6 +310,8 @@ en:
     booking:
       cancellation: "Cancellation"
       you_sure: "You sure?"
+    request:
+      delete: "Delete"
 
   bookings:
     index:
@@ -334,3 +341,7 @@ en:
 
   search: "Search"
 
+  requests:
+    title: "Title"
+    content: "Content"
+    create_time: "Create Time"
