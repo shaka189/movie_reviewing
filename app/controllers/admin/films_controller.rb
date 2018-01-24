@@ -12,28 +12,33 @@ class Admin::FilmsController < Admin::BaseController
 
   def new
     @film = Film.new
-    @film.categories.build
+    @film.film_categories.build
     @film.watching_days.build
     @film.watching_times.build
   end
 
   def create
-    @film = Film.new film_params
-    if @film.save
-      flash[:success] = t("flash.create_new_film")
+    begin
+      @film = Film.create film_params
+    rescue
+      flash[:danger] = t "flash.fail_create_film"
     else
-      flash[:danger] = t("flash.fail_create_film")
+      flash[:success] = t("flash.create_new_film")
+    ensure
+      redirect_to admin_films_path
     end
-    redirect_to admin_films_path
   end
 
   def update
-    if @film.update_attributes film_params
-      flash[:success] = t("flash.update_film")
+    begin
+      @film.update_attributes film_params
+    rescue
+      flash[:danger] = t "flash.fail_update_film"
     else
-      flash[:danger] = t("flash.fail_update_film")
+      flash[:success] = t("flash.update_film")
+    ensure
+       redirect_to admin_films_path
     end
-    redirect_to admin_films_path
   end
 
   def destroy
@@ -57,7 +62,7 @@ class Admin::FilmsController < Admin::BaseController
 
   def film_params
     params.require(:film).permit :name, :play_time, :link_trailer, :image, :imdb_rate,
-      :describe, :status, categories_attributes: [:id, :content, :_destroy],
+      :describe, :status, film_categories_attributes: [:id, :category_id, :_destroy],
       watching_days_attributes: [:id, :day_watching, :_destroy,
       watching_times_attributes: [:id, :time, :total_ticket, :price, :_destroy]]
   end

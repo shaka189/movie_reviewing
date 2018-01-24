@@ -32,10 +32,10 @@
     </div>
     <div class="col-md-4">
       <h4><%= t(".categories") %></h4>
-      <%= f.fields_for :categories do |builder| %>
-        <%= render "category_fields", f: builder %>
+      <%= f.fields_for :film_categories do |builder| %>
+        <%= render "film_category_fields", f: builder %>
       <% end %>
-      <%= link_to_add_fields f, :categories %>
+      <%= link_to_add_fields f, :film_categories %>
     </div>
     <div class="col-md-4">
       <%= f.fields_for :watching_days do |builder| %>

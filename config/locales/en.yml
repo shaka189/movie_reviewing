@@ -68,7 +68,20 @@ en:
     create_request_fail: "Create request fail"
     destroy_request_success: "Destroy request success"
     destroy_request_fail: "Destroy request fail"
-
+    cant_be_past: "Can't be in the past"
+    
+  categories:
+    action: "Action"
+    adventure: "Adventure"
+    crime: "Crime"
+    drama: "Drama"
+    history: "History"
+    horror: "Horror"
+    musical: "Musical"
+    fiction: "Fiction"
+    war: "War"
+    westerns: "Westerns"
+  
   export:
     export_excel: "Export Excel"
 

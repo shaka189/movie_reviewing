@@ -1,6 +1,5 @@
 class RatingsController < ApplicationController
   before_action :authenticate_user!
-  before_action :load_films
 
   def create
     create_new_rating @rating
@@ -10,6 +9,7 @@ class RatingsController < ApplicationController
     @rating = Rating.find_by id: params[:id]
     if @rating
       if @rating.update_attributes rating_params
+        @film = Film.find_by id: params[:rating][:film_id]
         @ratings = @film.ratings.desc_create_time.paginate page: params[:page],
           per_page: Settings.paginate_number.per_page
         render json: {
@@ -34,6 +34,7 @@ class RatingsController < ApplicationController
   def destroy
     @rating = Rating.find_by id: params[:id]
     if @rating.destroy
+      @film = Film.find_by id: params[:rating][:film_id]
       @ratings = @film.ratings.desc_create_time.paginate page: params[:page],
           per_page: Settings.paginate_number.per_page
       render json: {
@@ -55,6 +56,7 @@ class RatingsController < ApplicationController
     rating = Rating.new rating_params
     rating.user_id = current_user.id
     if rating.save
+      @film = Film.find_by id: params[:rating][:film_id]
       @ratings = @film.ratings.desc_create_time.paginate page: params[:page],
         per_page: Settings.paginate_number.per_page
       render json: {
@@ -71,10 +73,6 @@ class RatingsController < ApplicationController
         message: t("flash.create_rate_failed")
       }
     end
-  end
-
-  def load_films
-    @film = Film.find_by id: params[:rating][:film_id]
   end
 
   def rating_params

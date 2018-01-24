@@ -1,70 +1,72 @@
-<div class="container">
-  <div class="col-xs-12">
-    <div class="page-header">
-      <h1><%= t ".new_post" %></h1>
-    </div>
-    <div class="carousel slide" id="myCarousel">
-      <div class="carousel-inner">
-        <div class="item active">
-          <ul class="thumbnails">
-            <% for i in 0..3 %>
-              <%= link_to post_review_path(@posts[i]) do %>
-                <li class="col-sm-3">
-                  <div class="casing">
-                    <div class="thumbnail">
-                      <%= image_tag @posts[i].image %>
+<% if @posts.present? %>
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="page-header">
+        <h1><%= t ".new_post" %></h1>
+      </div>
+      <div class="carousel slide" id="myCarousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <ul class="thumbnails">
+              <% for i in 0..3 %>
+                <%= link_to post_review_path(@posts[i]) do %>
+                  <li class="col-sm-3">
+                    <div class="casing">
+                      <div class="thumbnail">
+                        <%= image_tag @posts[i].image %>
+                      </div>
+                      <div class="caption">
+                        <h3><%= @posts[i].title %></h3>
+                        <p><%= @posts[i].content %></p>
+                      </div>
                     </div>
-                    <div class="caption">
-                      <h3><%= @posts[i].title %></h3>
-                      <p><%= @posts[i].content %></p>
-                    </div>
-                  </div>
-                </li>
+                  </li>
+                <% end %>
               <% end %>
-            <% end %>
-          </ul>
-        </div>
-          <!-- /Slide1 -->
-        <div class="item">
-          <ul class="thumbnails">
-            <% for i in 4..7 %>
-              <%= link_to post_review_path(@posts[i]) do %>
-                <li class="col-sm-3">
-                  <div class="casing">
-                    <div class="thumbnail">
-                      <%= image_tag @posts[i].image %>
+            </ul>
+          </div>
+            <!-- /Slide1 -->
+          <div class="item">
+            <ul class="thumbnails">
+              <% for i in 4..7 %>
+                <%= link_to post_review_path(@posts[i]) do %>
+                  <li class="col-sm-3">
+                    <div class="casing">
+                      <div class="thumbnail">
+                        <%= image_tag @posts[i].image %>
+                      </div>
+                      <div class="caption">
+                        <h3><%= @posts[i].title %></h3>
+                        <p><%= @posts[i].content %></p>
+                      </div>
                     </div>
-                    <div class="caption">
-                      <h3><%= @posts[i].title %></h3>
-                      <p><%= @posts[i].content %></p>
-                    </div>
-                  </div>
-                </li>
+                  </li>
+                <% end %>
               <% end %>
-            <% end %>
-          </ul>
-        </div>
-          <!-- /Slide2 -->
-        <div class="item">
-          <ul class="thumbnails">
-            <% for i in 8..11 %>
-              <%= link_to post_review_path(@posts[i]) do %>
-                <li class="col-sm-3">
-                  <div class="casing">
-                    <div class="thumbnail">
-                      <%= image_tag @posts[i].image %>
+            </ul>
+          </div>
+            <!-- /Slide2 -->
+          <div class="item">
+            <ul class="thumbnails">
+              <% for i in 8..11 %>
+                <%= link_to post_review_path(@posts[i]) do %>
+                  <li class="col-sm-3">
+                    <div class="casing">
+                      <div class="thumbnail">
+                        <%= image_tag @posts[i].image %>
+                      </div>
+                      <div class="caption">
+                        <h3><%= @posts[i].title %></h3>
+                        <p><%= @posts[i].content %></p>
+                      </div>
                     </div>
-                    <div class="caption">
-                      <h3><%= @posts[i].title %></h3>
-                      <p><%= @posts[i].content %></p>
-                    </div>
-                  </div>
-                </li>
+                  </li>
+                <% end %>
               <% end %>
-            <% end %>
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
